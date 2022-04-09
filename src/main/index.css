@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Heebo:wght@600&family=Rubik+Wet+Paint&display=swap");
+
+#body {
+  background-image: url("/Users/rohhyun/Desktop/developer-hyun/hyun-portpolio-site/hyun-web/public/images/banners/background1.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+#menu {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #313131;
+  background: #fff;
+}
+
+#menu ul {
+  display: block;
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+}
+
+#menu li {
+  display: inline-block;
+  font-family: "Heebo", sans-serif;
+  position: relative;
+  margin: 0 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#menu li::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: 1px solid #000;
+  left: 50%;
+  width: 0;
+  transition: all 250ms ease-out;
+}
+
+#menu li:hover::after {
+  border-bottom: 1px solid #000;
+  left: 0%;
+  width: 100%;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Babylonica", cursive;
+  font-size: 600px;
+  color: #fff;
+}
