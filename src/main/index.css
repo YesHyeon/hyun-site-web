@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Heebo:wght@600&family=Rubik+Wet+Paint&display=swap");
 
 #body {
-  background-image: url("/Users/rohhyun/Desktop/developer-hyun/hyun-portpolio-site/hyun-web/public/images/banners/background1.png");
+  background-image: url("/Users/rohhyun/Desktop/developer-hyun/hyun-web/public/images/banners/background1.png");
   background-size: cover;
   height: 100vh;
 }
@@ -10,7 +10,8 @@
 #menu {
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid #313131;
+  height: 60px;
+  border-bottom: 2px solid #313131;
   background: #fff;
 }
 

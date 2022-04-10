@@ -1,4 +1,5 @@
 import "./index.css";
+import { Link } from "react-scroll";
 
 function MainPage() {
   return (
@@ -11,7 +12,9 @@ function MainPage() {
           <li>Activity</li>
           <li>Project</li>
           <li>SNS</li>
-          <li>Gallery</li>
+          <Link to="gallery-body" spy={true} smooth={true} offset={-81}>
+            <li>Gallery</li>
+          </Link>
         </ul>
       </div>
       <div id="main">
