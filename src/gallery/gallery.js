@@ -3,14 +3,12 @@ import "./gallery.css";
 import axios from "axios";
 
 const GalleryPage = () => {
-  const [data2, setData] = React.useState([]);
   const [photos, setPhotos] = React.useState([]);
   React.useEffect(() => {
     axios
       .get("https://4f9c32a1-8ce8-438a-8543-7ffc29e830b3.mock.pstmn.io/gallery")
       .then((result) => {
         setPhotos(result.data.jejudo);
-        setData(result.data);
       })
       .catch((error) => {
         console.log("에러발생", error);

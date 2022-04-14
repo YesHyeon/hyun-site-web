@@ -6,7 +6,10 @@ function MainPage() {
     <div id="body">
       <div id="menu">
         <ul>
-          <li>Introduce</li>
+          <Link to="IntroduceBody" spy={true} smooth={true} offset={-51}>
+            <li>Introduce</li>
+          </Link>
+
           <li>Award</li>
           <li>Certification</li>
           <li>Activity</li>

@@ -4,3 +4,12 @@ body,
 #root > div {
   height: 100%;
 }
+
+.moveTopBtn {
+  position: fixed;
+  z-index: 3;
+  bottom: 50px;
+  right: 50px;
+  width: 4rem;
+  height: 4rem;
+}
