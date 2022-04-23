@@ -3,12 +3,16 @@ import "./gallery.css";
 import axios from "axios";
 
 const GalleryPage = () => {
-  const [photos, setPhotos] = React.useState([]);
+  const [jejudo, setJejudo] = React.useState([]);
+  const [busan, setBusan] = React.useState([]);
+  const [gangneung, setGangneung] = React.useState([]);
   React.useEffect(() => {
     axios
       .get("https://4f9c32a1-8ce8-438a-8543-7ffc29e830b3.mock.pstmn.io/gallery")
       .then((result) => {
-        setPhotos(result.data.jejudo);
+        setJejudo(result.data.jejudo);
+        setBusan(result.data.busan);
+        setGangneung(result.data.gangneung);
       })
       .catch((error) => {
         console.log("에러발생", error);
@@ -19,21 +23,21 @@ const GalleryPage = () => {
     <div id="gallery-body">
       <h1>Welcome JEJU!</h1>
       <div id="photo-list">
-        {photos.map((photo, index) => {
+        {jejudo.map((photo, index) => {
           // eslint-disable-next-line jsx-a11y/alt-text
           return <img key={index} src={photo.imgUrl} />;
         })}
       </div>
       <h1>Welcome Busan!</h1>
       <div id="photo-list">
-        {photos.map((photo, index) => {
+        {busan.map((photo, index) => {
           // eslint-disable-next-line jsx-a11y/alt-text
           return <img key={index} src={photo.imgUrl} />;
         })}
       </div>
       <h1>Welcome Gangneung!</h1>
       <div id="photo-list">
-        {photos.map((photo, index) => {
+        {gangneung.map((photo, index) => {
           // eslint-disable-next-line jsx-a11y/alt-text
           return <img key={index} src={photo.imgUrl} />;
         })}

@@ -5,6 +5,11 @@ body,
   height: 100%;
 }
 
+#Main {
+  display: block;
+  position: relative;
+}
+
 .moveTopBtn {
   position: fixed;
   z-index: 3;

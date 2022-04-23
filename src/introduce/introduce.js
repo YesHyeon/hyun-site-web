@@ -34,7 +34,7 @@ const IntroducePage = () => {
             그리고 반려견 삼순이와 함께 즐거운 인생을 살아갑니다 !
           </div>
         </div>
-        <br />
+        <div>--------------------------------------------------</div>
         <div>🏛 EDUCATION | KyungHee Univ. IE & SW</div>
         <div>
           🐱 GITHUB | 예스현, 깃허브

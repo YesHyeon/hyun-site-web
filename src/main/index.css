@@ -5,6 +5,7 @@
   background-image: url("/Users/rohhyun/Desktop/developer-hyun/hyun-web/public/images/banners/background1.png");
   background-size: cover;
   height: 100vh;
+  border-bottom: 3px solid black;
 }
 
 #menu {
@@ -12,7 +13,7 @@
   width: 100%;
   height: 60px;
   border-bottom: 2px solid #313131;
-  background: #fff;
+  background-color: white;
   z-index: auto;
 }
 
@@ -21,6 +22,10 @@
   text-align: center;
   list-style: none;
   text-decoration: none;
+}
+
+#menu .sns {
+  display: block;
 }
 
 #menu li {
