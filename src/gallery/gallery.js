@@ -8,7 +8,7 @@ const GalleryPage = () => {
   const [gangneung, setGangneung] = React.useState([]);
   React.useEffect(() => {
     axios
-      .get("https://4f9c32a1-8ce8-438a-8543-7ffc29e830b3.mock.pstmn.io/gallery")
+      .get("http://localhost:8082/gallery")
       .then((result) => {
         setJejudo(result.data.jejudo);
         setBusan(result.data.busan);
