@@ -1,21 +1,23 @@
-import React from "react";
-import "./gallery.css";
-import axios from "axios";
+import React, { useState } from 'react';
+import './gallery.css';
+import axios from 'axios';
 
 const GalleryPage = () => {
-  const [jejudo, setJejudo] = React.useState([]);
-  const [busan, setBusan] = React.useState([]);
-  const [gangneung, setGangneung] = React.useState([]);
+  const [jejudo, setJejudo] = useState([]);
+  const [busan, setBusan] = useState([]);
+  const [gangneung, setGangneung] = useState([]);
   React.useEffect(() => {
     axios
-      .get("http://localhost:8082/gallery")
+      .get(
+        'http://ec2-13-53-88-5.eu-north-1.compute.amazonaws.com:8082/gallery'
+      )
       .then((result) => {
         setJejudo(result.data.jejudo);
         setBusan(result.data.busan);
         setGangneung(result.data.gangneung);
       })
       .catch((error) => {
-        console.log("에러발생", error);
+        console.log('에러발생', error);
       });
   }, []);
 

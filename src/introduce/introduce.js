@@ -1,5 +1,5 @@
-import "/Users/rohhyun/Desktop/developer-hyun/hyun-web/src/fonts/index.js";
-import "./introduce.css";
+import '/Users/rohhyun/Desktop/developer-hyun/hyun-web/src/fonts/index.js';
+import './introduce.css';
 
 const IntroducePage = () => {
   return (
@@ -9,11 +9,7 @@ const IntroducePage = () => {
           width="300"
           className="profile1"
           src="/images/introduce/hyun-profile.png"
-        />
-        <img
-          width="300"
-          className="profile2"
-          src="/images/introduce/hyun-profile2.png"
+          alt="profile"
         />
       </div>
       <div id="Description">
@@ -53,42 +49,5 @@ const IntroducePage = () => {
     </div>
   );
 };
-
-// const IntroduceBody = styled.div`
-//   display: flex;
-//   height: 100vh;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const TitleContainer = styled.div`
-//   display: flex;
-//   padding-right: 30px;
-// `;
-
-// const Name = styled.div`
-//   font-family: "Nanum Brush Script", cursive;
-//   font-size: 100px;
-//   margin-right: 20px;
-// `;
-
-// const Job = styled.div`
-//   font-family: bold;
-//   position: relative;
-//   top: 55px;
-//   align-itmes: center;
-// `;
-
-// const Description = styled.div`
-//   font-family: heebo;
-//   font-size: 20px;
-//   margin-left: 30px;
-//   border-radius: 30px;
-// `;
-
-// const ImagContainr = styled.div``;
-
-// // const Image = styled.img`
-// //   border-radius: 210px;
-// // `;
 
 export default IntroducePage;

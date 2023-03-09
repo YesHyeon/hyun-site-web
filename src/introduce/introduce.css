@@ -11,20 +11,6 @@
   border-radius: 210px;
 }
 
-#ImageContainer .profile2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 320px;
-  border-radius: 210px;
-  opacity: 0;
-}
-
-#ImageContainer .profile2:hover {
-  opacity: 1;
-}
-
 #Description {
   font-family: heebo;
   font-size: 20px;
@@ -43,7 +29,7 @@
 }
 
 #TitleContainer .Name {
-  font-family: "Nanum Brush Script", cursive;
+  font-family: 'Nanum Brush Script', cursive;
   font-size: 100px;
   margin-right: 10px;
 }
@@ -55,5 +41,4 @@
   font-family: bold;
   position: relative;
   top: 65px;
-  align-itmes: center;
 }
