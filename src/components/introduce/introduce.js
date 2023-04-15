@@ -1,5 +1,6 @@
-import '/Users/rohhyun/Desktop/developer-hyun/hyun-web/src/fonts/index.js';
+import '../../fonts/index';
 import './introduce.css';
+import profileImage from '../../images/introduce/hyun-profile.png';
 
 const IntroducePage = () => {
   return (
@@ -8,7 +9,7 @@ const IntroducePage = () => {
         <img
           width="300"
           className="profile1"
-          src="/images/introduce/hyun-profile.png"
+          src={profileImage}
           alt="profile"
         />
       </div>

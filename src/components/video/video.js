@@ -1,11 +1,15 @@
-import "./video.css";
+import './video.css';
+import jejudo1 from '../../images/gallery/jejudo3.jpeg';
+import jejudo2 from '../../images/gallery/jejudo8.jpeg';
+import busan1 from '../../images/gallery/jejudo6.jpeg';
+import busan2 from '../../images/gallery/busan1.jpeg';
 
 const GalleryMainPage = () => {
   return (
     <div id="gallery">
       <div id="gallery-bod">
-        <img src="/images/gallery/jejudo3.jpeg" />
-        <img src="/images/gallery/jejudo8.jpeg" />
+        <img src={jejudo1} />
+        <img src={jejudo2} />
         <div className="gallery-index">
           <text>-------------------------------------</text>
           <text className="gallery-title">
@@ -32,8 +36,8 @@ const GalleryMainPage = () => {
             Haewoondae Gwangan-ri
           </text>
         </div>
-        <img src="/images/gallery/busan1.jpeg" />
-        <img src="/images/gallery/busan6.jpeg" />
+        <img src={busan1} />
+        <img src={busan2} />
       </div>
     </div>
   );

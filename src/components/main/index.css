@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Heebo:wght@600&family=Rubik+Wet+Paint&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Heebo:wght@600&family=Rubik+Wet+Paint&display=swap');
 
 #body {
-  background-image: url("/Users/rohhyun/Desktop/developer-hyun/hyun-web/public/images/banners/background1.png");
+  background-image: url('../../images/banners/background1.png');
   background-size: cover;
   height: 100vh;
   border-bottom: 3px solid black;
@@ -30,7 +30,7 @@
 
 #menu li {
   display: inline-block;
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
   position: relative;
   margin: 0 20px;
   line-height: 30px;
@@ -39,7 +39,7 @@
 
 #menu li::after {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   border-bottom: 1px solid #000;
   left: 50%;
@@ -60,7 +60,7 @@
 }
 
 .title {
-  font-family: "Babylonica", cursive;
+  font-family: 'Babylonica', cursive;
   font-size: 500px;
   color: #fff;
 }
