@@ -3,7 +3,7 @@ import MainPage from './components/main/index';
 import GalleryPage from './components/gallery/gallery.js';
 import IntroducePage from './components/introduce/introduce';
 import { Switch, Route } from 'react-router-dom';
-import GalleryMainPage from './components/video/video.js';
+import GalleryMainPage from './components/video/video';
 
 function App() {
   const $topBtn = document.querySelector('.moveTopBtn');
