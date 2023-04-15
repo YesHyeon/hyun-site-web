@@ -10,9 +10,9 @@ function App() {
 
   // 버튼 클릭 시 맨 위로 이동
 
-  // $topBtn.onclick = () => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // };
+  $topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div id="Main">
@@ -24,7 +24,7 @@ function App() {
           <GalleryPage />
         </Route>
       </Switch>
-      <img src="images/icons/arrow.png" className="moveTopBtn" />
+      <img src={require('./images/icons/arrow.png')} className="moveTopBtn" />
     </div>
   );
 }
