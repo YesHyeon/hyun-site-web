@@ -6,9 +6,7 @@ const GalleryPage = () => {
   const [images, setImages] = useState([]);
   React.useEffect(() => {
     axios
-      .get(
-        'http://ec2-16-16-124-87.eu-north-1.compute.amazonaws.com:8082/gallery'
-      )
+      .get('https://api.yeshyun.shop/gallery')
       .then((result) => {
         setImages(result.data);
       })
