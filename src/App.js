@@ -4,27 +4,29 @@ import GalleryPage from './components/gallery/gallery.js';
 import IntroducePage from './components/introduce/introduce';
 import { Switch, Route } from 'react-router-dom';
 import GalleryMainPage from './components/video/video';
+import { useRef } from 'react';
 
 function App() {
-  const $topBtn = document.querySelector('.moveTopBtn');
-
-  // 버튼 클릭 시 맨 위로 이동
-
-  $topBtn.onclick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const homeRef = useRef(HTMLDivElement);
+  const onHomeClick = () => {
+    homeRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div id="Main">
       <Switch>
         <Route exact={true} path={'/'}>
-          <MainPage />
+          <div ref={homeRef}>
+            <MainPage />
+          </div>
           <IntroducePage />
           <GalleryMainPage />
           <GalleryPage />
         </Route>
       </Switch>
-      <img src={require('./images/icons/arrow.png')} className="moveTopBtn" />
+      <button onClick={onHomeClick}>
+        <img src={require('./images/icons/arrow.png')} className="moveTopBtn" />
+      </button>
     </div>
   );
 }
