@@ -1,28 +1,15 @@
-import "./index.css";
-import { Link } from "react-scroll";
+import './index.css';
+import { Link } from 'react-scroll';
+import profileImage from '../../images/introduce/hyun-profile.png';
+import { MainContainer } from './index.styles';
 
 function MainPage() {
   return (
-    <div id="body">
-      <div id="menu">
-        <ul>
-          <Link to="IntroduceBody" spy={true} smooth={true} offset={-51}>
-            <li>Introduce</li>
-          </Link>
-          <li>Award</li>
-          <li>Certification</li>
-          <li>Activity</li>
-          <li>Project</li>
-          <li>SNS</li>
-          <Link to="gallery-body" spy={true} smooth={true} offset={-81}>
-            <li>Gallery</li>
-          </Link>
-        </ul>
-      </div>
+    <MainContainer>
       <div id="main">
         <div className="title">Hyun</div>
       </div>
-    </div>
+    </MainContainer>
   );
 }
 export default MainPage;

@@ -1,5 +1,6 @@
 import './App.css';
 import MainPage from './components/main/index';
+import Headers from './components/header/header';
 import GalleryPage from './components/gallery/gallery.js';
 import IntroducePage from './components/introduce/introduce';
 import { Switch, Route } from 'react-router-dom';
@@ -16,6 +17,7 @@ function App() {
     <div id="Main">
       <Switch>
         <Route exact={true} path={'/'}>
+          <Headers />
           <div ref={homeRef}>
             <MainPage />
           </div>
