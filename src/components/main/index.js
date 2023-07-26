@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import logoPath from './svgPath.json';
+import './index.css';
+import Rain from '../rain/rain';
 
 import {
   MainContainer,
@@ -9,6 +11,9 @@ import {
   Blink,
   TypingWrapper,
   Svg,
+  RainWrapper,
+  Flag,
+  FlagText,
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
 
@@ -73,12 +78,24 @@ function MainPage() {
     end: {
       pathLength: 1,
       fill: 'black',
-      transition: { duration: 30 },
+      transition: { duration: 100 },
     },
   };
 
+  const flaTextArray = ['Frontend Developer'];
+
+  for (let i = 0; i < 20; i++) {
+    flaTextArray.push('Frontend Developer');
+  }
+
   return (
     <MainContainer>
+      <Rain />
+      <Flag>
+        {flaTextArray.map((i) => {
+          return <FlagText>{i}</FlagText>;
+        })}
+      </Flag>
       <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
         <motion.svg>
           <motion.path
@@ -88,18 +105,37 @@ function MainPage() {
             strokeWidth="3"
             d={logoPath.logoPath}
           />
+          {/* <motion.path
+            variants={svg}
+            initial="end"
+            animate="start"
+            strokeWidth="3"
+            d={logoPath.logoPath}
+          />
+          <motion.path
+            variants={svg}
+            initial="start"
+            animate="end"
+            strokeWidth="3"
+            d={logoPath.logoPath}
+          />
+          <motion.path
+            variants={svg}
+            initial="start"
+            animate="end"
+            strokeWidth="3"
+            d={logoPath.logoPath}
+          /> */}
         </motion.svg>
       </Svg>
-
       <DescriptionWrapper>
-        <Description ref={boxRef}>안녕하세요</Description>
+        <Description ref={boxRef}>안녕하세요 👨🏻‍💻 </Description>
         <TypingWrapper>
           <Description ref={boxRef} index={index}>
             {descriptionText}
           </Description>
           <Blink></Blink>
         </TypingWrapper>
-
         <Description ref={boxRef}>프론트엔드 개발자 노현입니다.</Description>
       </DescriptionWrapper>
     </MainContainer>

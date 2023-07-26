@@ -8,27 +8,16 @@ export const MainContainer = styled.div`
   width: 100%;
   height: 100vh;
 
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 20px;
 
-  background-image: url(${roomStartBack});
   background-size: cover;
 
   border-bottom: 3px solid black;
   overflow-x: hidden;
-
-  isolation: isolate;
-
-  ::after {
-    content: '';
-    position: absolute;
-    background: white;
-    z-index: -1;
-    inset: 0;
-    opacity: 0.8;
-  }
+  overflow-y: hidden;
 `;
 
 export const OpacityBackground = styled.div`
@@ -84,6 +73,37 @@ export const Svg = styled.svg`
   width: 229px;
   stroke: black;
   fill: black;
+`;
+
+export const RainWrapper = styled.div`
+  width: 100%;
+  height: 500px;
+  background-color: red;
+`;
+
+export const Flag = styled.div`
+  display: flex;
+  flex-direction: low;
+  width: 4000px;
+  background-color: pink;
+  position: absolute;
+  top: 100px;
+  transform: rotate(-2deg);
+  gap: 10px;
+`;
+
+export const FlagText = styled.div`
+  font-size: 20px;
+  animation: left 10s linear infinite;
+
+  @keyframes left {
+    50% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
 `;
 
 export const Main = styled.div``;
