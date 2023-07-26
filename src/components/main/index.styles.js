@@ -42,4 +42,9 @@ export const Blink = styled.div`
   }
 `;
 
+export const Svg = styled.svg`
+  width: 229px;
+  stroke: black;
+`;
+
 export const Main = styled.div``;

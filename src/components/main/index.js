@@ -1,4 +1,5 @@
-import { gsap } from 'gsap';
+import { motion } from 'framer-motion';
+import logoPath from './svgPath.json';
 
 import {
   MainContainer,
@@ -7,6 +8,7 @@ import {
   DescriptionWrapper,
   Blink,
   TypingWrapper,
+  Svg,
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
 
@@ -66,9 +68,30 @@ function MainPage() {
     return () => clearInterval(nameInterval);
   });
 
+  const svg = {
+    start: { pathLength: 0, fill: 'rgba(255,255,255,0)' },
+    end: {
+      pathLength: 1,
+      fill: 'rgba(255,255,255,1)',
+      transition: { duration: 15 },
+    },
+  };
+
   return (
     <MainContainer>
       <Title>{text}</Title>
+      <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg>
+          <motion.path
+            variants={svg}
+            initial="start"
+            animate="end"
+            strokeWidth="3"
+            d={logoPath.logoPath}
+          />
+        </motion.svg>
+      </Svg>
+
       <DescriptionWrapper>
         <Description ref={boxRef}>안녕하세요</Description>
         <TypingWrapper>
