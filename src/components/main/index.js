@@ -69,17 +69,16 @@ function MainPage() {
   });
 
   const svg = {
-    start: { pathLength: 0, fill: 'rgba(255,255,255,0)' },
+    start: { pathLength: 0, fill: 'black' },
     end: {
       pathLength: 1,
-      fill: 'rgba(255,255,255,1)',
+      fill: 'black',
       transition: { duration: 15 },
     },
   };
 
   return (
     <MainContainer>
-      <Title>{text}</Title>
       <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
         <motion.svg>
           <motion.path

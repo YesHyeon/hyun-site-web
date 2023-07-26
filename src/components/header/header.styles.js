@@ -8,7 +8,7 @@ export const MainContainer = styled.header`
   height: 60px;
   border-bottom: 2px solid #313131;
   background-color: white;
-  z-index: auto;
+  z-index: 100;
 `;
 
 export const HeaderList = styled.div`
