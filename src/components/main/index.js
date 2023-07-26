@@ -1,16 +1,23 @@
 import { gsap } from 'gsap';
-import './index.css';
-import { MainContainer, Title, Description } from './index.styles';
+
+import {
+  MainContainer,
+  Title,
+  Description,
+  DescriptionWrapper,
+  Blink,
+  TypingWrapper,
+} from './index.styles';
 import { useState, useEffect, useRef } from 'react';
 
 function MainPage() {
   const NAME_TEXT = 'Hyun Roh';
 
   const DES_TEXT = [
-    '기록과 디자인을 즐기는',
-    'React를 사용하는',
-    'Typescript를 사용하는',
-    '새로움에 도전적인',
+    '기록과 디자인을 즐기는  ',
+    'React를 사용하는   ',
+    'Typescript를 사용하는   ',
+    '새로움에 도전적인     ',
   ];
 
   const [text, setText] = useState('');
@@ -21,6 +28,8 @@ function MainPage() {
   const [index, setIndex] = useState(0);
 
   const boxRef = useRef(null);
+
+  const [typingSpeed, setTypingSpeed] = useState(200);
 
   useEffect(() => {
     const nameInterval = setInterval(() => {
@@ -36,6 +45,7 @@ function MainPage() {
       }
       // 글자 다 써졌을때, 다시 지우는 과정
       else {
+        setTypingSpeed(70);
         setDescritionText(descriptionText.slice(0, -1));
 
         if (descriptionText.length === 1) {
@@ -43,11 +53,15 @@ function MainPage() {
           if (index === DES_TEXT.length - 1) {
             setIndex(0);
           } else {
+            const speedArray = [100, 120, 150];
+            setTypingSpeed(
+              speedArray[Math.floor(Math.random() * speedArray.length)]
+            );
             setIndex(index + 1);
           }
         }
       }
-    }, 100);
+    }, typingSpeed);
 
     return () => clearInterval(nameInterval);
   });
@@ -55,9 +69,15 @@ function MainPage() {
   return (
     <MainContainer>
       <Title>{text}</Title>
-      <Description ref={boxRef}>안녕하세요</Description>
-      <Description ref={boxRef}>{descriptionText}</Description>
-      <Description ref={boxRef}>프론트엔드 개발자 노현입니다.</Description>
+      <DescriptionWrapper>
+        <Description ref={boxRef}>안녕하세요</Description>
+        <TypingWrapper>
+          <Description ref={boxRef}>{descriptionText}</Description>
+          <Blink></Blink>
+        </TypingWrapper>
+
+        <Description ref={boxRef}>프론트엔드 개발자 노현입니다.</Description>
+      </DescriptionWrapper>
     </MainContainer>
   );
 }
