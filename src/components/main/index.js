@@ -69,11 +69,11 @@ function MainPage() {
   });
 
   const svg = {
-    start: { pathLength: 0, fill: 'black' },
+    start: { pathLength: 0, fill: 'none' },
     end: {
       pathLength: 1,
       fill: 'black',
-      transition: { duration: 15 },
+      transition: { duration: 30 },
     },
   };
 
@@ -94,7 +94,9 @@ function MainPage() {
       <DescriptionWrapper>
         <Description ref={boxRef}>안녕하세요</Description>
         <TypingWrapper>
-          <Description ref={boxRef}>{descriptionText}</Description>
+          <Description ref={boxRef} index={index}>
+            {descriptionText}
+          </Description>
           <Blink></Blink>
         </TypingWrapper>
 

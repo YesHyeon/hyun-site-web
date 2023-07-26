@@ -49,6 +49,15 @@ export const Description = styled.div`
   font-family: 'BlackHanSans';
   font-size: 50px;
   color: black;
+
+  color: ${(props) =>
+    props.index === 0
+      ? '#761F1F'
+      : props.index === 1 || props.index === 2
+      ? '#14118A'
+      : props.index === 3
+      ? '#14461C'
+      : 'black'};
 `;
 
 export const DescriptionWrapper = styled.div`
