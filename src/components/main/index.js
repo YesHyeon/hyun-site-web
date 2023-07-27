@@ -84,18 +84,13 @@ function MainPage() {
 
   const flaTextArray = ['Frontend Developer'];
 
-  for (let i = 0; i < 20; i++) {
-    flaTextArray.push('Frontend Developer');
+  for (let i = 0; i < 4; i++) {
+    flaTextArray.push(...DES_TEXT);
   }
 
   return (
     <MainContainer>
       <Rain />
-      <Flag>
-        {flaTextArray.map((i) => {
-          return <FlagText>{i}</FlagText>;
-        })}
-      </Flag>
       <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
         <motion.svg>
           <motion.path
@@ -138,6 +133,11 @@ function MainPage() {
         </TypingWrapper>
         <Description ref={boxRef}>프론트엔드 개발자 노현입니다.</Description>
       </DescriptionWrapper>
+      <Flag>
+        {flaTextArray.map((i) => {
+          return <FlagText>{i}</FlagText>;
+        })}
+      </Flag>
     </MainContainer>
   );
 }

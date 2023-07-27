@@ -10,6 +10,7 @@ export const MainContainer = styled.div`
 
   flex-direction: row;
   justify-content: center;
+
   align-items: center;
   gap: 20px;
 
@@ -85,10 +86,11 @@ export const Flag = styled.div`
   display: flex;
   flex-direction: low;
   width: 4000px;
-  background-color: pink;
+  background-color: black;
+  color: white;
   position: absolute;
-  top: 100px;
-  transform: rotate(-2deg);
+  bottom: 200px;
+
   gap: 10px;
 `;
 
