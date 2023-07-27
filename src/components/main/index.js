@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import logoPath from './svgPath.json';
-import './index.css';
 import Rain from '../rain/rain';
+import profle from '../../images/introduce/profile.png';
 
 import {
   MainContainer,
