@@ -17,13 +17,15 @@ function App() {
     <div id="Main">
       <Switch>
         <Route exact={true} path={'/'}>
-          <Headers />
           <div ref={homeRef}>
             <MainPage />
           </div>
-          <IntroducePage />
-          <GalleryMainPage />
-          <GalleryPage />
+          <div>
+            <Headers />
+            <IntroducePage />
+            <GalleryMainPage />
+            <GalleryPage />
+          </div>
         </Route>
       </Switch>
       <button onClick={onHomeClick}>

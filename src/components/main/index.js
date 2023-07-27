@@ -14,6 +14,10 @@ import {
   RainWrapper,
   Flag,
   FlagText,
+  ProfileImage,
+  RightMenu,
+  MenuText,
+  MenuTextWrapper,
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
 
@@ -90,7 +94,8 @@ function MainPage() {
 
   return (
     <MainContainer>
-      <Rain />
+      {/* <Rain /> */}
+      {/* <ProfileImage src={profle} /> */}
       <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
         <motion.svg>
           <motion.path
@@ -131,13 +136,22 @@ function MainPage() {
           </Description>
           <Blink></Blink>
         </TypingWrapper>
-        <Description ref={boxRef}>프론트엔드 개발자 노현입니다.</Description>
+        <Description ref={boxRef}>프론트엔드 개발자 노현입니다!</Description>
       </DescriptionWrapper>
-      <Flag>
+      {/* <Flag>
         {flaTextArray.map((i) => {
           return <FlagText>{i}</FlagText>;
         })}
-      </Flag>
+      </Flag> */}
+      <RightMenu>
+        <MenuTextWrapper>
+          <MenuText>Resume</MenuText>
+          <MenuText>Github</MenuText>
+          <MenuText>TechBlog</MenuText>
+          <MenuText>LinkedIn</MenuText>
+          <MenuText></MenuText>
+        </MenuTextWrapper>
+      </RightMenu>
     </MainContainer>
   );
 }
