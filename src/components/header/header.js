@@ -11,6 +11,7 @@ function Headers() {
         </Link>
         <HeaderList>Award</HeaderList>
         <HeaderList>Certification</HeaderList>
+        <HeaderList style={{ 'font-size': 20 }}>노현의 이력서</HeaderList>
         <HeaderList>Activity</HeaderList>
         <HeaderList>Project</HeaderList>
         <HeaderList>SNS</HeaderList>

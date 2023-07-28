@@ -13,13 +13,11 @@ import {
   Flag,
   FlagText,
   ProfileImage,
-  RightMenu,
-  MenuText,
-  MenuTextWrapper,
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
+import Headers from '../header/header';
 
-function MainPage() {
+const MainPage = () => {
   const NAME_TEXT = 'Hyun Roh';
 
   const DES_TEXT = [
@@ -91,19 +89,19 @@ function MainPage() {
   }
 
   return (
-    <MainContainer>
-      {/* <Rain /> */}
-      {/* <ProfileImage src={profle} /> */}
-      <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
-        <motion.svg>
-          <motion.path
-            variants={svg}
-            initial="start"
-            animate="end"
-            strokeWidth="3"
-            d={logoPath.logoPath}
-          />
-          {/* <motion.path
+    <>
+      <Headers />
+      <MainContainer>
+        <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
+          <motion.svg>
+            <motion.path
+              variants={svg}
+              initial="start"
+              animate="end"
+              strokeWidth="3"
+              d={logoPath.logoPath}
+            />
+            {/* <motion.path
             variants={svg}
             initial="end"
             animate="start"
@@ -124,50 +122,20 @@ function MainPage() {
             strokeWidth="3"
             d={logoPath.logoPath}
           /> */}
-        </motion.svg>
-      </Svg>
-      <DescriptionWrapper>
-        <Description ref={boxRef}>안녕하세요 👨🏻‍💻 </Description>
-        <TypingWrapper>
-          <Description ref={boxRef} index={index}>
-            {descriptionText}
-          </Description>
-          <Blink></Blink>
-        </TypingWrapper>
-        <Description ref={boxRef}>프론트엔드 개발자 노현입니다!</Description>
-      </DescriptionWrapper>
-      {/* <Flag>
-        {flaTextArray.map((i) => {
-          return <FlagText>{i}</FlagText>;
-        })}
-      </Flag> */}
-      <RightMenu>
-        <MenuTextWrapper>
-          <MenuText
-            onClick={() =>
-              window.open(
-                'https://www.figma.com/file/9p7UCPZf4RxpHES2T17vkP/%EB%85%B8%ED%98%84-%EC%9D%B4%EB%A0%A5%EC%84%9C?type=design&node-id=0%3A1&mode=design&t=o2E2jp9XDcwuYP1f-1'
-              )
-            }
-          >
-            Resume
-          </MenuText>
-          <MenuText onClick={() => window.open('https://github.com/YesHyeon')}>
-            Github
-          </MenuText>
-          <MenuText onClick={() => window.open('https://yeshyun.tistory.com')}>
-            TechBlog
-          </MenuText>
-
-          <MenuText
-            onClick={() => window.open('https://www.linkedin.com/in/yeshyun')}
-          >
-            LinkedIn
-          </MenuText>
-          <MenuText></MenuText>
-        </MenuTextWrapper>
-      </RightMenu>
-    </MainContainer>
+          </motion.svg>
+        </Svg>
+        <DescriptionWrapper>
+          <Description ref={boxRef}>안녕하세요 👨🏻‍💻 </Description>
+          <TypingWrapper>
+            <Description ref={boxRef} index={index}>
+              {descriptionText}
+            </Description>
+            <Blink></Blink>
+          </TypingWrapper>
+          <Description ref={boxRef}>프론트엔드 개발자 노현입니다!</Description>
+        </DescriptionWrapper>
+      </MainContainer>
+    </>
   );
-}
+};
 export default MainPage;

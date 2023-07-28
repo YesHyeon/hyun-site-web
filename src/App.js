@@ -21,12 +21,10 @@ function App() {
           <div ref={homeRef}>
             <MainPage />
           </div>
-          <div>
-            <Introduce />
-            <Headers />
-            <GalleryMainPage />
-            <GalleryPage />
-          </div>
+
+          <Introduce />
+          <GalleryMainPage />
+          <GalleryPage />
         </Route>
       </Switch>
       <button onClick={onHomeClick}>
