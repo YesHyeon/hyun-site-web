@@ -18,6 +18,7 @@ import {
 } from './profileCard.styles';
 import github from '../../images/icons/github.svg';
 import blog from '../../images/icons/blog.svg';
+import email from '../../images/icons/email.svg';
 
 const ProfileCard = (props) => {
   return (
@@ -36,14 +37,24 @@ const ProfileCard = (props) => {
             alt="profile"
           />
           <SnsContainer>
-            <Sns src={github}></Sns>
-            <Sns src={blog}></Sns>
+            <Sns
+              src={github}
+              onClick={() => window.open('https://github.com/YesHyeon')}
+            ></Sns>
+            <Sns
+              src={blog}
+              onClick={() => window.open('https://yeshyun.tistory.com')}
+            ></Sns>
+            <Sns
+              src={email}
+              onClick={() => window.open('https://yeshyun.tistory.com')}
+            ></Sns>
           </SnsContainer>
         </ImageContainer>
         <TextContainer>
           <TitleContainer>
             <Name>노현</Name>
-            <Job>Front-End Engineer</Job>
+            <Job>Front-End Developer</Job>
           </TitleContainer>
           <Description>
             <DescriptionText>

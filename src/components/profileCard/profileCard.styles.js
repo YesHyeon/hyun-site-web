@@ -60,7 +60,7 @@ export const ImageContainer = styled.div`
 export const SnsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 20px;
 `;
 
 export const Sns = styled.img`
