@@ -2,10 +2,14 @@ import styled from '@emotion/styled';
 
 export const MainContainer = styled.div`
   display: flex;
+
+  position: absolute;
   flex-direction: column;
   width: calc(100vw - 150px);
   height: calc(100vh - 100px);
   margin: 0 auto;
+  left: 0px;
+  right: 0px;
 
   align-items: center;
   background-color: white;
