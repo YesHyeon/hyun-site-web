@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import roomStartBack from '../../images/banners/background1.png';
-import profle from '../../images/introduce/profile.png';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -18,7 +17,7 @@ export const MainContainer = styled.div`
   overflow-x: hidden;
   overflow-y: hidden;
 
-  padding-left: 100px;
+  padding-left: 150px;
 `;
 
 export const ProfileImage = styled.img`
@@ -125,6 +124,18 @@ export const RightMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: open 1s;
+
+  @keyframes open {
+    0% {
+      right: -300px;
+    }
+
+    100% {
+      right: 0px;
+    }
+  }
 `;
 
 export const MenuTextWrapper = styled.div`
