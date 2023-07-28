@@ -1,5 +1,4 @@
 import '../../fonts/index';
-import './profileCard.css';
 import profileImage from '../../images/introduce/profile.png';
 import {
   Header,
