@@ -4,24 +4,36 @@ import jejudo2 from '../../images/gallery/jejudo8.jpeg';
 import busan1 from '../../images/gallery/jejudo6.jpeg';
 import busan2 from '../../images/gallery/busan1.jpeg';
 import RightMenu from '../rightMenu/rightMenu';
-import { MainContainer } from './works.styles';
+import {
+  MainContainer,
+  CardContainer,
+  Card,
+  FrontCard,
+  BackCard,
+  Flip,
+} from './works.styles';
+import Title from '../title/title';
+import Profile from '../../images/introduce/profile.png';
 
 const Works = () => {
   return (
     <MainContainer>
+      <Title text={'Works'} />
       <RightMenu />
-      <div id="gallery-bod">
-        <img src={jejudo1} />
-        <img src={jejudo2} />
-        <div className="gallery-index">
-          <text>-------------------------------------</text>
-          <text className="gallery-title">Work</text>
-          <text className="gallery-description">
-            NHN Cloud <br />
-            펫페오톡
-          </text>
-        </div>
-      </div>
+      <CardContainer>
+        <Flip>
+          <Card>
+            <FrontCard src={Profile}></FrontCard>
+            <BackCard></BackCard>
+          </Card>
+        </Flip>
+        <Flip>
+          <Card>
+            <FrontCard src={Profile}></FrontCard>
+            <BackCard></BackCard>
+          </Card>
+        </Flip>
+      </CardContainer>
       <div id="gallery-bod">
         <div className="gallery-index">
           <text>-------------------------------------</text>
