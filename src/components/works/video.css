@@ -29,12 +29,12 @@ img {
 .gallery-index {
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .gallery-title {
-  font-family: "Heebo", sans-serif;
+  font-family: 'BlackHanSans';
   font-size: 100px;
 }
 

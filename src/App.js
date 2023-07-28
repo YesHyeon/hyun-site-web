@@ -5,7 +5,7 @@ import GalleryPage from './components/gallery/gallery.js';
 import ProfileCard from './components/profileCard/profileCard';
 import Introduce from './components/introduce/introduce';
 import { Switch, Route } from 'react-router-dom';
-import GalleryMainPage from './components/video/video';
+import GalleryMainPage from './components/works/works';
 import { useRef } from 'react';
 
 function App() {
