@@ -1,4 +1,5 @@
 import './video.css';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import jejudo1 from '../../images/gallery/jejudo3.jpeg';
 import jejudo2 from '../../images/gallery/jejudo8.jpeg';
 import busan1 from '../../images/gallery/jejudo6.jpeg';
@@ -11,26 +12,64 @@ import {
   FrontCard,
   BackCard,
   Flip,
+  DescriptionTitle,
+  DescriptionText,
+  CardAnimation,
 } from './works.styles';
 import Title from '../title/title';
 import Profile from '../../images/introduce/profile.png';
-
 const Works = () => {
+  const [rotatePosition, setRotatePosition] = useState(false);
+
+  const dom = useRef();
+
+  const handleScroll = useCallback(([entry]) => {
+    const { current } = dom;
+
+    if (entry.isIntersecting) {
+      setRotatePosition(true);
+      console.log('여기야!!');
+    } else {
+      setRotatePosition(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    let observer;
+    const { current } = dom;
+
+    if (current) {
+      observer = new IntersectionObserver(handleScroll, { threshold: 0.3 });
+      observer.observe(current);
+
+      return () => observer && observer.disconnect();
+    }
+  }, [handleScroll]);
   return (
-    <MainContainer>
+    <MainContainer ref={dom}>
       <Title text={'Works'} />
       <RightMenu />
       <CardContainer>
         <Flip>
-          <Card>
-            <FrontCard src={Profile}></FrontCard>
-            <BackCard></BackCard>
-          </Card>
+          {rotatePosition ? (
+            <Card>
+              <FrontCard src={Profile}></FrontCard>
+              <BackCard />
+            </Card>
+          ) : (
+            <CardAnimation>
+              <FrontCard src={Profile}></FrontCard>
+              <BackCard />
+            </CardAnimation>
+          )}
         </Flip>
         <Flip>
           <Card>
             <FrontCard src={Profile}></FrontCard>
-            <BackCard></BackCard>
+            <BackCard>
+              <DescriptionTitle>Project</DescriptionTitle>
+              <DescriptionText># 개인포트폴리오 사이트</DescriptionText>
+            </BackCard>
           </Card>
         </Flip>
       </CardContainer>
