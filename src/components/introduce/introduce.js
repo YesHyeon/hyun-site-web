@@ -31,6 +31,8 @@ function Introduce() {
     }
   }, [handleScroll]);
 
+  console.log('ccc', cardPosition);
+
   return (
     <MainContainer ref={dom}>
       {scrollPosition ? (
@@ -43,7 +45,7 @@ function Introduce() {
           />
         </>
       ) : null}
-      {cardPosition ? <ProfileCard /> : null}
+      {cardPosition ? <ProfileCard setCardPosition={setCardPosition} /> : null}
     </MainContainer>
   );
 }

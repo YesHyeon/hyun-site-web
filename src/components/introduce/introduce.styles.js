@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import roomStartBack from '../../images/banners/background1.png';
 import card from '../../images/introduce/card.png';
+import { floatAnimation } from '../../utils/floatingAnimation';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -15,6 +16,8 @@ export const MainContainer = styled.div`
   gap: 20px;
 
   border-bottom: 3px solid black;
+
+  /* background-image: url(${roomStartBack}); */
   overflow-x: hidden;
   overflow-y: hidden;
 `;
@@ -22,7 +25,7 @@ export const MainContainer = styled.div`
 export const Hand = styled.img`
   width: 800px;
   position: absolute;
-  right: 0px;
+  right: -10px;
 
   height: ${(props) => props.scrollPosition};
 
@@ -34,7 +37,7 @@ export const Hand = styled.img`
     }
 
     100% {
-      right: 0px;
+      right: -10px;
     }
   }
 `;
@@ -46,15 +49,14 @@ export const ProfileCardWrapper = styled.div`
   background-size: cover;
   width: 280px;
   height: 140px;
-  transform: rotate(45deg);
+  rotate: 45deg;
   position: absolute;
   object-fit: cover;
-  box-shadow: 2px 2px black;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.7);
+
   cursor: pointer;
 
-  animation: open2 1s linear;
-
-  @keyframes open2 {
+  @keyframes cardSlideRightAnimation {
     0% {
       right: calc(-80vw);
     }
@@ -64,8 +66,16 @@ export const ProfileCardWrapper = styled.div`
     }
   }
 
+  animation-fill-mode: forwards;
+  animation-name: cardSlideRightAnimation, ${floatAnimation};
+  animation-delay: 0s, 1s;
+  animation-duration: 1s, 6s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: 1, 10;
+
   :hover {
     background-color: black;
+    box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
     width: 320px;
     height: 160px;
     box-shadow: 4px 4px gray;

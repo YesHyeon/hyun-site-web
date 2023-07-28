@@ -24,7 +24,6 @@ function App() {
           <div>
             <Introduce />
             <Headers />
-            <ProfileCard />
             <GalleryMainPage />
             <GalleryPage />
           </div>

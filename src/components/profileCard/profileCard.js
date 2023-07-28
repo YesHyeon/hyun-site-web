@@ -11,11 +11,13 @@ import {
   Profile,
 } from './profileCard.styles';
 
-const ProfileCard = () => {
+const ProfileCard = (props) => {
   return (
     <MainContainer>
       <Header>
-        <CloseButton>X</CloseButton>
+        <CloseButton onClick={() => props.setCardPosition(false)}>
+          X
+        </CloseButton>
       </Header>
       <BodyContainer>
         <ImageContainer>
