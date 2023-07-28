@@ -46,7 +46,7 @@ function Introduce() {
 
   return (
     <MainContainer ref={dom}>
-      <Title />
+      <Title text={'About Me'} />
       <LeftContainer>
         <DescriptionContainer>
           <DescriptionWrapper>

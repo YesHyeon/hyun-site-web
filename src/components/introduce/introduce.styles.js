@@ -97,7 +97,7 @@ export const DescriptionContainer = styled.div`
   gap: 20px;
   width: 100%;
   height: 100%;
-  padding-top: 200px;
+  padding-top: 150px;
   padding-right: 20px;
 `;
 
