@@ -17,8 +17,6 @@ export const MainContainer = styled.div`
   border-bottom: 3px solid black;
   overflow-x: hidden;
   overflow-y: hidden;
-
-  padding-left: 150px;
 `;
 
 export const Hand = styled.img`
