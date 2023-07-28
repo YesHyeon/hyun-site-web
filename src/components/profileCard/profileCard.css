@@ -1,8 +1,10 @@
 #IntroduceBody {
   display: flex;
-  height: 100vh;
+  height: 80vh;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  z-index: 100;
 }
 
 #ImageContainer .profile1 {
