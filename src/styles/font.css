@@ -7,3 +7,8 @@
   font-family: 'BlackHanSans';
   src: url('../fonts/BlackHanSans-Regular.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'NanumSquareR';
+  src: url('../fonts/NanumSquareRoundR.woff') format('woff');
+}
