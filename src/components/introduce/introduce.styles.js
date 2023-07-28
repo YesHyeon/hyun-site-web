@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import roomStartBack from '../../images/banners/background1.png';
 import card from '../../images/introduce/card.png';
 import { floatAnimation } from '../../utils/floatingAnimation';
+import introduceBackground from '../../images/introduce/introduceBackground.svg';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -17,7 +18,8 @@ export const MainContainer = styled.div`
 
   border-bottom: 3px solid black;
 
-  /* background-image: url(${roomStartBack}); */
+  background-image: url(${introduceBackground});
+  background-color: black;
   overflow-x: hidden;
   overflow-y: hidden;
 `;
@@ -79,4 +81,40 @@ export const ProfileCardWrapper = styled.div`
     box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
     transition: 1s;
   }
+`;
+
+export const LeftContainer = styled.div`
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+`;
+
+export const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  padding-right: 20px;
+`;
+
+export const DescriptionWrapper = styled.div`
+  color: white;
+`;
+
+export const DescriptionTitle = styled.div`
+  font-size: 30px;
+  font-family: 'NanumSquareR';
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+`;
+
+export const DescriptionText = styled.div`
+  padding-top: 5px;
+  font-size: 16px;
+  font-family: 'NanumSquareR';
 `;
