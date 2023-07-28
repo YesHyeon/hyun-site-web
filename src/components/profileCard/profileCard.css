@@ -1,0 +1,44 @@
+#IntroduceBody {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#ImageContainer .profile1 {
+  width: 300px;
+  height: 320px;
+  border-radius: 210px;
+}
+
+#Description {
+  font-family: heebo;
+  font-size: 20px;
+  margin-left: 100px;
+  border-radius: 30px;
+}
+
+.Description2 {
+  display: inline-block;
+  background-color: bisque;
+}
+
+#TitleContainer {
+  display: flex;
+  padding-right: 30px;
+}
+
+#TitleContainer .Name {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 100px;
+  margin-right: 10px;
+}
+
+#TitleContainer .Job {
+  display: inline-block;
+  top: 30px;
+  bottom: 30px;
+  font-family: bold;
+  position: relative;
+  top: 65px;
+}
