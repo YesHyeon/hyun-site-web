@@ -89,6 +89,9 @@ export const Flag = styled.div`
   display: flex;
   flex-direction: low;
   width: 4000px;
+  height: 50px;
+  align-items: center;
+
   background-color: black;
   color: white;
   position: absolute;
@@ -99,7 +102,8 @@ export const Flag = styled.div`
 
 export const FlagText = styled.div`
   font-size: 20px;
-  animation: left 10s linear infinite;
+  animation: left 10s ease-in-out infinite;
+  font-family: 'BlackHanSans';
 
   @keyframes left {
     50% {

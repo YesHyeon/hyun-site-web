@@ -134,6 +134,11 @@ const MainPage = () => {
           </TypingWrapper>
           <Description ref={boxRef}>프론트엔드 개발자 노현입니다!</Description>
         </DescriptionWrapper>
+        <Flag>
+          {flaTextArray.map((i) => {
+            return <FlagText>{i}</FlagText>;
+          })}
+        </Flag>
       </MainContainer>
     </>
   );
