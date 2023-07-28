@@ -71,14 +71,12 @@ export const ProfileCardWrapper = styled.div`
   animation-delay: 0s, 1s;
   animation-duration: 1s, 6s;
   animation-timing-function: linear, ease-in-out;
-  animation-iteration-count: 1, 10;
+  animation-iteration-count: 1, infinite;
 
   :hover {
-    background-color: black;
-    box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
     width: 320px;
     height: 160px;
-    box-shadow: 4px 4px gray;
+    box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
     transition: 1s;
   }
 `;

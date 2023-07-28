@@ -40,21 +40,66 @@ export const BodyContainer = styled.div`
   align-items: center;
 `;
 
-export const Description = styled.div`
-  font-family: heebo;
+export const TextContainer = styled.div`
   font-size: 20px;
   margin-left: 100px;
   border-radius: 30px;
+  font-family: 'NanumSquareR';
 `;
 
 export const ImageContainer = styled.div`
+  display: flex;
   width: 300px;
-  height: 320px;
-  border-radius: 210px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const SnsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+`;
+
+export const Sns = styled.img`
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+
+  :hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
 `;
 
 export const Profile = styled.img`
-  width: 300px;
-  height: 320px;
-  border-radius: 210px;
+  width: 360px;
+  height: 360px;
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Name = styled.div`
+  font-family: 'BlackHanSans';
+  font-size: 100px;
+  margin-right: 10px;
+`;
+
+export const Job = styled.div`
+  font-family: bold;
+`;
+
+export const Description = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const DescriptionText = styled.li`
+  font-family: 'NanumSquareR';
 `;

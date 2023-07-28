@@ -1,15 +1,24 @@
 import '../../fonts/index';
 import './profileCard.css';
-import profileImage from '../../images/introduce/hyun-profile.png';
+import profileImage from '../../images/introduce/profile.png';
 import {
   Header,
   BodyContainer,
   MainContainer,
   CloseButton,
-  Description,
+  TextContainer,
   ImageContainer,
   Profile,
+  TitleContainer,
+  Name,
+  Job,
+  Description,
+  DescriptionText,
+  SnsContainer,
+  Sns,
 } from './profileCard.styles';
+import github from '../../images/icons/github.svg';
+import blog from '../../images/icons/blog.svg';
 
 const ProfileCard = (props) => {
   return (
@@ -26,43 +35,44 @@ const ProfileCard = (props) => {
             className="profile1"
             src={profileImage}
             alt="profile"
-          ></Profile>
+          />
+          <SnsContainer>
+            <Sns src={github}></Sns>
+            <Sns src={blog}></Sns>
+          </SnsContainer>
         </ImageContainer>
-        <Description>
-          <div id="TitleContainer">
-            <div className="Name">
-              <div>노현</div>
-            </div>
-            <div className="Job">Front-End Engineer</div>
-          </div>
-          <div>
-            <div className="Description2">"Fearless Hero in life"</div>
-            <div>
-              두려움이 없는 인생의 주인공이라는 신념 하나로 <br /> 늘 새로움에
-              도전하고, 발전해나갑니다.
+        <TextContainer>
+          <TitleContainer>
+            <Name>노현</Name>
+            <Job>Front-End Engineer</Job>
+          </TitleContainer>
+          <Description>
+            <DescriptionText>
+              안녕하세요 프론트엔드 개발자 노현입니다.
+            </DescriptionText>
+            <DescriptionText>
+              평소 UI/UX의 문제점을 발견하여 개선하는 일에 관심이 많습니다.
+            </DescriptionText>
+            <DescriptionText>
+              산업공학 출신으로 인간공학적인 측면으로 사용자의 경험을 높이다가,
               <br />
-              밝고 긍정적인 저로 인해 주변 사람들이 행복해하면 활력을 얻습니다 :
-              )
+              현재는 프론트엔드 개발을 통해 사용자의 경험을 높이고 있습니다.
+            </DescriptionText>
+            <DescriptionText>
+              활발하고 긍정적인 성격으로 팀원들과 협업하는 것을 좋아하고,
               <br />
-              그리고 반려견 삼순이와 함께 즐거운 인생을 살아갑니다 !
-            </div>
-          </div>
-          <div>--------------------------------------------------</div>
-          <div>🏛 EDUCATION | KyungHee Univ. IE & SW</div>
-          <div>
-            🐱 GITHUB | 예스현, 깃허브
-            <a href="https://github.com/YesHyeon"> ⇢ </a>
-          </div>
-          <div>
-            📚 TISTORY | 로현, 청춘의 개발
-            <a href="https://yeshyun.tistory.com/"> ⇢ </a>
-          </div>
-          <div>
-            🍀 NAVER | 로현, 청춘의 기록
-            <a href="https://blog.naver.com/hyun_record"> ⇢ </a>
-          </div>
-          <div>📞 CONTACT | shgus1224@naver.com</div>
-        </Description>
+              긍정적인 에너지를 전파하고 싶어합니다.
+            </DescriptionText>
+            <DescriptionText>
+              도전하는 즐거움과 가치를 깨달으며 다양한 활동을 했습니다.
+            </DescriptionText>
+            <DescriptionText>
+              감성이 풍부하여 예술적인 활동에 관심이 많고,
+              <br />
+              기술 블로그와 스터디를 통해 생각을 정리하는 것을 생활화합니다.
+            </DescriptionText>
+          </Description>
+        </TextContainer>
       </BodyContainer>
     </MainContainer>
   );
