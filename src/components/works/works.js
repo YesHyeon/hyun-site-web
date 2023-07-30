@@ -15,6 +15,7 @@ import {
   DescriptionTitle,
   DescriptionText,
   CardAnimation,
+  FrontImage,
 } from './works.styles';
 import Title from '../title/title';
 import Profile from '../../images/introduce/profile.png';
@@ -52,20 +53,26 @@ const Works = () => {
       <CardContainer>
         <Flip>
           {rotatePosition ? (
-            <Card>
-              <FrontCard src={Profile}></FrontCard>
-              <BackCard />
-            </Card>
-          ) : (
             <CardAnimation>
-              <FrontCard src={Profile}></FrontCard>
+              <FrontCard>
+                <FrontImage src={Profile} />
+              </FrontCard>
               <BackCard />
             </CardAnimation>
+          ) : (
+            <Card>
+              <FrontCard>
+                <FrontImage src={Profile} />
+              </FrontCard>
+              <BackCard />
+            </Card>
           )}
         </Flip>
         <Flip>
           <Card>
-            <FrontCard src={Profile}></FrontCard>
+            <FrontCard>
+              <FrontImage src={Profile}></FrontImage>
+            </FrontCard>
             <BackCard>
               <DescriptionTitle>Project</DescriptionTitle>
               <DescriptionText># 개인포트폴리오 사이트</DescriptionText>

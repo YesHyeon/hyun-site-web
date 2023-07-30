@@ -15,8 +15,8 @@ import Title from '../title/title';
 import { Description } from '../profileCard/profileCard.styles';
 
 function Introduce() {
-  const [scrollPosition, setScrollPosition] = useState(false);
   const [cardPosition, setCardPosition] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(false);
 
   const dom = useRef();
 
