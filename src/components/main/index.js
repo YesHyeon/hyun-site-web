@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import logoPath from './svgPath.json';
-import Rain from '../rain/rain';
 import {
   MainContainer,
   Title,
@@ -101,27 +100,6 @@ const MainPage = () => {
               strokeWidth="3"
               d={logoPath.logoPath}
             />
-            {/* <motion.path
-            variants={svg}
-            initial="end"
-            animate="start"
-            strokeWidth="3"
-            d={logoPath.logoPath}
-          />
-          <motion.path
-            variants={svg}
-            initial="start"
-            animate="end"
-            strokeWidth="3"
-            d={logoPath.logoPath}
-          />
-          <motion.path
-            variants={svg}
-            initial="start"
-            animate="end"
-            strokeWidth="3"
-            d={logoPath.logoPath}
-          /> */}
           </motion.svg>
         </Svg>
         <DescriptionWrapper>
