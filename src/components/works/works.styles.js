@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { lotation, lotationBack } from '../../utils/lotationAnimations';
 
 export const MainContainer = styled.div`
   position: relative;
@@ -31,9 +32,9 @@ export const Card = styled.div`
   transform-style: preserve-3d;
   cursor: pointer;
 
-  :hover {
+  /* :hover {
     transform: rotateY(180deg);
-  }
+  } */
 `;
 
 export const CardAnimation = styled.div`
@@ -44,18 +45,11 @@ export const CardAnimation = styled.div`
   transform-style: preserve-3d;
   cursor: pointer;
 
-  animation: lota 2s ease 1;
+  animation: ${(props) => (props.animation === true ? lotation : lotationBack)}
+    2s ease 1;
 
-  transform: rotateY(180deg);
-
-  @keyframes lota {
-    0% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(-180deg);
-    }
-  }
+  transform: ${(props) =>
+    props.animation === true ? 'rotateY(180deg)' : 'rotateY(0deg)'};
 `;
 
 export const FrontCard = styled.div`
