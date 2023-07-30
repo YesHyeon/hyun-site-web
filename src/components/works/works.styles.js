@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: white;
 `;
 
 export const CardContainer = styled.div`
@@ -60,25 +60,32 @@ export const CardAnimation = styled.div`
 
 export const FrontCard = styled.div`
   position: absolute;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   color: #fff;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 8px 16px 100px 0px rgba(155, 103, 0, 0.8);
+  box-shadow: 0px 30px 10px 0px rgba(0, 0, 0, 0.8);
 `;
 
 export const FrontImage = styled.img`
-  width: calc(100% - 38px);
+  width: calc(100% - 28px);
+  padding-left: 10px;
   height: 450px;
-  position: absolute;
-  top: 0px;
   padding-top: 19px;
-  margin: 0 auto;
+`;
+
+export const FrontText = styled.div`
+  width: 100%;
+  color: black;
+  padding-top: 30px;
+  padding-left: 14px;
 `;
 
 export const BackCard = styled.div`
@@ -87,16 +94,33 @@ export const BackCard = styled.div`
   height: 100%;
   backface-visibility: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+
   border-radius: 10px;
-  color: #fff;
+  color: black;
+  padding: 30px;
 
   background-color: white;
 
   transform: rotateY(180deg);
 
-  box-shadow: 8px 16px 100px 0px rgba(155, 103, 0, 0.7);
+  box-shadow: 0px 30px 10px 0px rgba(0, 0, 0, 0.8);
+`;
+
+export const BackCardName = styled.div`
+  font-size: 30px;
+`;
+
+export const BackCardTitle = styled.div`
+  font-size: 20px;
+`;
+
+export const BackCardList = styled.ul``;
+
+export const BackCardListli = styled.li``;
+
+export const BackCardText = styled.div`
+  font-size: 15px;
 `;
 
 export const DescriptionTitle = styled.div`
