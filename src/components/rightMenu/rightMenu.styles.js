@@ -2,11 +2,14 @@ import styled from '@emotion/styled';
 
 export const MainContainer = styled.div`
   position: absolute;
+  top: 0px;
+
   width: 300px;
-  height: 100%;
+  height: 100vh;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   right: 0px;
+  z-index: 300;
   background-color: black;
 
   display: flex;
