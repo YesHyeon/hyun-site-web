@@ -17,6 +17,8 @@ export const MainContainer = styled.div`
   border-bottom: 3px solid black;
   overflow-x: hidden;
   overflow-y: hidden;
+
+  background-color: black;
 `;
 
 export const ProfileImage = styled.img`
@@ -35,13 +37,12 @@ export const OpacityBackground = styled.div`
 export const Title = styled.div`
   font-family: 'Babylonica', cursive;
   font-size: 200px;
-  color: 'black';
+  color: white;
 `;
 
 export const Description = styled.div`
   font-family: 'BlackHanSans';
   font-size: 50px;
-  color: black;
 
   color: ${(props) =>
     props.index === 0
@@ -50,12 +51,13 @@ export const Description = styled.div`
       ? '#14118A'
       : props.index === 3
       ? '#14461C'
-      : 'black'};
+      : 'white'};
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  color: white;
 `;
 
 export const TypingWrapper = styled.div`
