@@ -14,7 +14,7 @@ import {
   ProfileImage,
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
-import Headers from '../header/header';
+import Headers from '../../components/header/header';
 
 const MainPage = () => {
   const NAME_TEXT = 'Hyun Roh';

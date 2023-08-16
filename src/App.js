@@ -1,12 +1,11 @@
 import './App.css';
-import MainPage from './components/main/index';
-import Headers from './components/header/header';
-import GalleryPage from './components/gallery/gallery.js';
-import ProfileCard from './components/profileCard/profileCard';
-import Introduce from './components/introduce/introduce';
+import MainPage from './pages/main/index';
+import Introduce from './pages/introduce/introduce';
 import { Switch, Route } from 'react-router-dom';
-import GalleryMainPage from './components/works/works';
+import Works from './pages/works/works';
 import { useRef } from 'react';
+import Project from './pages/projects/project';
+import Works2 from './components/works2/works2';
 
 function App() {
   const homeRef = useRef(HTMLDivElement);
@@ -21,10 +20,10 @@ function App() {
           <div ref={homeRef}>
             <MainPage />
           </div>
-
           <Introduce />
-          <GalleryMainPage />
-          <GalleryPage />
+          <Works />
+          <Works2 />
+          <Project />
         </Route>
       </Switch>
       <button onClick={onHomeClick}>

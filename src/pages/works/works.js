@@ -1,10 +1,5 @@
 import './video.css';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import jejudo1 from '../../images/gallery/jejudo3.jpeg';
-import jejudo2 from '../../images/gallery/jejudo8.jpeg';
-import busan1 from '../../images/gallery/jejudo6.jpeg';
-import busan2 from '../../images/gallery/busan1.jpeg';
-import RightMenu from '../rightMenu/rightMenu';
 import {
   MainContainer,
   CardContainer,
@@ -23,7 +18,7 @@ import {
   BackCardList,
   BackCardListli,
 } from './works.styles';
-import Title from '../title/title';
+import Title from '../../components/title/title';
 import Profile from '../../images/introduce/profile.png';
 
 const Works = () => {

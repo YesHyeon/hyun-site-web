@@ -10,9 +10,8 @@ import {
 } from './introduce.styles';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import hand from '../../images/introduce/hand.svg';
-import ProfileCard from '../profileCard/profileCard';
-import Title from '../title/title';
-import { Description } from '../profileCard/profileCard.styles';
+import ProfileCard from '../../components/profileCard/profileCard';
+import Title from '../../components/title/title';
 
 function Introduce() {
   const [cardPosition, setCardPosition] = useState(false);
