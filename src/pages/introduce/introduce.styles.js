@@ -18,8 +18,7 @@ export const MainContainer = styled.div`
 
   border-bottom: 3px solid black;
 
-  background-image: url(${introduceBackground});
-  background-color: black;
+  background-color: white;
   overflow-x: hidden;
   overflow-y: hidden;
 
@@ -102,12 +101,12 @@ export const DescriptionContainer = styled.div`
   gap: 20px;
   width: 100%;
   height: 100%;
-  padding-top: 150px;
+  padding-top: 50px;
   padding-right: 20px;
 `;
 
 export const DescriptionWrapper = styled.div`
-  color: white;
+  color: black;
 `;
 
 export const DescriptionTitle = styled.div`

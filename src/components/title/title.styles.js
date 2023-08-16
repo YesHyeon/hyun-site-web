@@ -7,7 +7,6 @@ export const MainContainer = styled.header`
   font-size: 150px;
   font-family: 'MontserratBold';
   margin: 0 auto;
-  background-color: black;
   height: 150px;
 
   font-size: 100px;
@@ -25,15 +24,15 @@ export const MainContainer = styled.header`
 
   @keyframes neonGlow {
     0% {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00e5,
-        0 0 40px #ff00e5, 0 0 50px #ff00e5, 0 0 60px #ff00e5, 0 0 70px #ff00e5;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00bbff,
+        0 0 30px #00bbff, 0 0 40px #00bbff, 0 0 50px #00bbff, 0 0 60px #00ff15;
     }
     20% {
       text-shadow: none;
     }
     100% {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00e5,
-        0 0 40px #ff00e5, 0 0 50px #ff00e5, 0 0 60px #ff00e5, 0 0 70px #ff00e5;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00bbff,
+        0 0 40px #00bbff, 0 0 50px #00bbff, 0 0 60px #00bbff, 0 0 70px #00bbff;
     }
   }
 `;

@@ -7,14 +7,14 @@ const Works2 = () => {
 
   const handleScroll = useCallback(([entry]) => {
     const { current } = dom;
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
 
     if (entry.isIntersecting) {
       entry.target.style.color = 'blue';
     } else {
     }
 
-    console.log(entry);
+    // console.log(entry);
   }, []);
 
   //   useEffect(() => {
@@ -32,9 +32,7 @@ const Works2 = () => {
   useEffect(() => {
     const handleScroll = () => {
       //   const title1 = document.querySelector('.title-opacity');
-
-      console.log(window.scrollY);
-
+      // console.log(window.scrollY);
       //   if (window.scrollY > 3500) {
       //     title1.classList.add('project-title-animation');
       //   } else {

@@ -15,6 +15,7 @@ import {
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
 import Headers from '../../components/header/header';
+import emoji from '../../assets/images/icons/emoji.png';
 
 const MainPage = () => {
   const NAME_TEXT = 'Hyun Roh';
@@ -91,17 +92,7 @@ const MainPage = () => {
     <>
       <Headers />
       <MainContainer>
-        <Svg viewBox="0 0 334 363" xmlns="http://www.w3.org/2000/svg">
-          <motion.svg>
-            <motion.path
-              variants={svg}
-              initial="start"
-              animate="end"
-              strokeWidth="3"
-              d={logoPath.logoPath}
-            />
-          </motion.svg>
-        </Svg>
+        <ProfileImage src={emoji} />
         <DescriptionWrapper>
           <Description ref={boxRef}>안녕하세요 👨🏻‍💻 </Description>
           <TypingWrapper>
@@ -112,11 +103,11 @@ const MainPage = () => {
           </TypingWrapper>
           <Description ref={boxRef}>프론트엔드 개발자 노현입니다!</Description>
         </DescriptionWrapper>
-        <Flag>
+        {/* <Flag>
           {flaTextArray.map((i) => {
             return <FlagText>{i}</FlagText>;
           })}
-        </Flag>
+        </Flag> */}
       </MainContainer>
     </>
   );

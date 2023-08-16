@@ -33,8 +33,6 @@ const Works = () => {
 
     if (entry.isIntersecting) {
       setRotatePosition(true);
-
-      console.log('여기야!!');
     } else {
       setRotatePosition(false);
     }

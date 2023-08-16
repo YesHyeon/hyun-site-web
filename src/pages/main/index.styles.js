@@ -14,16 +14,15 @@ export const MainContainer = styled.div`
   align-items: center;
   gap: 20px;
 
-  border-bottom: 3px solid black;
   overflow-x: hidden;
   overflow-y: hidden;
 
-  background-color: black;
+  background-color: white;
 `;
 
 export const ProfileImage = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 300px;
 `;
 
 export const OpacityBackground = styled.div`
@@ -37,7 +36,6 @@ export const OpacityBackground = styled.div`
 export const Title = styled.div`
   font-family: 'Babylonica', cursive;
   font-size: 200px;
-  color: white;
 `;
 
 export const Description = styled.div`
@@ -51,13 +49,12 @@ export const Description = styled.div`
       ? '#14118A'
       : props.index === 3
       ? '#14461C'
-      : 'white'};
+      : 'black'};
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  color: white;
 `;
 
 export const TypingWrapper = styled.div`
@@ -97,7 +94,7 @@ export const Flag = styled.div`
   background-color: black;
   color: white;
   position: absolute;
-  bottom: 200px;
+  bottom: 100px;
 
   gap: 10px;
 `;
