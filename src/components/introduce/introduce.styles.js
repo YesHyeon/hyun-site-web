@@ -22,6 +22,8 @@ export const MainContainer = styled.div`
   background-color: black;
   overflow-x: hidden;
   overflow-y: hidden;
+
+  scale: 1;
 `;
 
 export const Hand = styled.img`
@@ -84,11 +86,14 @@ export const ProfileCardWrapper = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  width: 600px;
+  width: 750px;
   height: 100%;
   display: flex;
   flex-direction: row;
   margin-left: 50px;
+  opacity: 0;
+
+  transition: 1s;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -107,14 +112,15 @@ export const DescriptionWrapper = styled.div`
 
 export const DescriptionTitle = styled.div`
   font-size: 30px;
-  font-family: 'NanumSquareR';
-  font-weight: bold;
+  font-family: 'MontserratBold';
   border-bottom: 2px solid white;
   padding-bottom: 3px;
+
+  transition: 2s;
 `;
 
 export const DescriptionText = styled.div`
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'NanumSquareR';
 `;
