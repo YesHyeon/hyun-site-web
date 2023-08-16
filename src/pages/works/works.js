@@ -19,7 +19,7 @@ import {
   BackCardListli,
 } from './works.styles';
 import Title from '../../components/title/title';
-import Profile from '../../images/introduce/profile.png';
+import Profile from '../../assets/images/introduce/profile.png';
 
 const Works = () => {
   const [rotatePosition, setRotatePosition] = useState(false);

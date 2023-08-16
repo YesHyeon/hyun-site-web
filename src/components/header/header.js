@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import profileImage from '../../images/introduce/hyun-profile.png';
+import profileImage from '../../assets/images/introduce/hyun-profile.png';
 import { MainContainer, HeaderWrapper, HeaderList } from './header.styles';
 
 function Headers() {

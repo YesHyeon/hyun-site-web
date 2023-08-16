@@ -9,7 +9,7 @@ import {
   DescriptionWrapper,
 } from './introduce.styles';
 import { useState, useEffect, useRef, useCallback } from 'react';
-import hand from '../../images/introduce/hand.svg';
+import hand from '../../assets/images/introduce/hand.svg';
 import ProfileCard from '../../components/profileCard/profileCard';
 import Title from '../../components/title/title';
 

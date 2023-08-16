@@ -1,5 +1,5 @@
-import '../../fonts/index';
-import profileImage from '../../images/introduce/profile.png';
+import '../../assets/fonts/index';
+import profileImage from '../../assets/images/introduce/profile.png';
 import {
   Header,
   BodyContainer,
@@ -16,9 +16,9 @@ import {
   SnsContainer,
   Sns,
 } from './profileCard.styles';
-import github from '../../images/icons/github.svg';
-import blog from '../../images/icons/blog.svg';
-import email from '../../images/icons/email.svg';
+import github from '../../assets/images/icons/github.svg';
+import blog from '../../assets/images/icons/blog.svg';
+import email from '../../assets/images/icons/email.svg';
 
 const ProfileCard = (props) => {
   return (

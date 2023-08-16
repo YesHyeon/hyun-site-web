@@ -1,29 +1,29 @@
 @font-face {
   font-family: 'Heebo';
-  src: url('../fonts/Heebo-VariableFont_wght.ttf');
+  src: url('../assets/fonts/Heebo-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'BlackHanSans';
-  src: url('../fonts/BlackHanSans-Regular.woff') format('woff');
+  src: url('../assets/fonts/BlackHanSans-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'NanumSquareR';
-  src: url('../fonts/NanumSquareRoundR.woff') format('woff');
+  src: url('../assets/fonts/NanumSquareRoundR.woff') format('woff');
 }
 
 @font-face {
   font-family: 'MontserratBold';
-  src: url('../fonts/Montserrat-Bold.woff') format('woff');
+  src: url('../assets/fonts/Montserrat-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'MontserratSemibold';
-  src: url('../fonts/Montserrat-SemiBold.woff') format('woff');
+  src: url('../assets/fonts/Montserrat-SemiBold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'MontserratThin';
-  src: url('../fonts/Montserrat-Thin.woff') format('woff');
+  src: url('../assets/fonts/Montserrat-Thin.woff') format('woff');
 }

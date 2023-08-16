@@ -27,7 +27,10 @@ function App() {
         </Route>
       </Switch>
       <button onClick={onHomeClick}>
-        <img src={require('./images/icons/arrow.png')} className="moveTopBtn" />
+        <img
+          src={require('./assets/images/icons/arrow.png')}
+          className="moveTopBtn"
+        />
       </button>
     </div>
   );

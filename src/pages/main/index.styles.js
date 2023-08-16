@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import roomStartBack from '../../images/banners/background1.png';
+import roomStartBack from '../../assets/images/banners/background1.png';
 
 export const MainContainer = styled.div`
   display: flex;

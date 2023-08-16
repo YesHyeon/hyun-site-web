@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import roomStartBack from '../../images/banners/background1.png';
-import card from '../../images/introduce/card.png';
+import roomStartBack from '../../assets/images/banners/background1.png';
+import card from '../../assets/images/introduce/card.png';
 import { floatAnimation } from '../../utils/floatingAnimation';
-import introduceBackground from '../../images/introduce/introduceBackground.svg';
+import introduceBackground from '../../assets/images/introduce/introduceBackground.svg';
 
 export const MainContainer = styled.div`
   display: flex;
