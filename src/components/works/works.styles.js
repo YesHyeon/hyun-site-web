@@ -5,15 +5,16 @@ export const MainContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: black;
+  transition: 1s;
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  padding-top: 200px;
-  padding-left: 90px;
+  justify-content: center;
+  padding-top: 30px;
   gap: 30px;
 `;
 
