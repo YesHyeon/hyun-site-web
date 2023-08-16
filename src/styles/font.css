@@ -12,3 +12,18 @@
   font-family: 'NanumSquareR';
   src: url('../fonts/NanumSquareRoundR.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MontserratSemibold';
+  src: url('../fonts/Montserrat-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MontserratThin';
+  src: url('../fonts/Montserrat-Thin.woff') format('woff');
+}
