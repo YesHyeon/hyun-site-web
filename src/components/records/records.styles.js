@@ -52,3 +52,54 @@ export const Title3 = styled.div`
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
 `;
+
+export const DescriptionContainer = styled.div`
+  display: block;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-right: 20px;
+`;
+
+export const DescriptionWrapper = styled.div`
+  color: black;
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 10px;
+  text-align: start;
+
+  &:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+`;
+
+export const DescriptionTitle = styled.text`
+  font-size: 30px;
+  font-family: 'MontserratBold';
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+  box-shadow: inset 0 -20px 0 #ffff6f;
+
+  transition: 2s;
+`;
+
+export const DescriptionText = styled.div`
+  padding-top: 5px;
+  font-size: 15px;
+  font-family: 'NanumSquareR';
+`;

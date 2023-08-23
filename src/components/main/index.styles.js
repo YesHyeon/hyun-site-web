@@ -4,9 +4,8 @@ import roomStartBack from '../../assets/images/banners/background1.png';
 export const MainContainer = styled.div`
   display: flex;
 
-  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 
   flex-direction: row;
   justify-content: center;

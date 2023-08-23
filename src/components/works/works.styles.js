@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import { lotation, lotationBack } from '../../utils/lotationAnimations';
+import Profile from '../../assets/images/introduce/profile.png';
 
 export const MainContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: black;
+
   transition: 1s;
 `;
 
@@ -19,8 +20,8 @@ export const CardContainer = styled.div`
 `;
 
 export const Flip = styled.div`
-  width: 450px;
-  height: 550px;
+  width: 200px;
+  height: 200px;
   position: relative;
   perspective: 1100px;
 `;
@@ -66,6 +67,7 @@ export const FrontCard = styled.div`
   color: #fff;
   border-radius: 10px;
   background-color: white;
+  background-image: url(${Profile});
   box-shadow: 0px 30px 10px 0px rgba(0, 0, 0, 0.8);
 `;
 

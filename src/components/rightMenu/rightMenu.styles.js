@@ -1,45 +1,45 @@
 import styled from '@emotion/styled';
 
 export const MainContainer = styled.div`
-  position: absolute;
+  position: sticky;
   top: 0px;
 
   width: 300px;
   height: 100vh;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  right: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  left: 0px;
   z-index: 300;
-  background-color: black;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
+  border: 1px solid black;
 
   animation: open 1s;
 
+  display: flex;
+  flex-direction: column;
+
   @keyframes open {
     0% {
-      right: -300px;
+      left: -300px;
     }
 
     100% {
-      right: 0px;
+      left: 0px;
     }
   }
 `;
 
 export const MenuTextWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: row;
+  gap: 10px;
 
-  color: white;
+  color: black;
 `;
 
 export const MenuText = styled.div`
   font-family: BlackHanSans;
-  font-size: 30px;
+  font-size: 10px;
   cursor: pointer;
 
   :hover {

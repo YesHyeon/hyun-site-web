@@ -61,13 +61,7 @@ const Works = () => {
             }}
           >
             <CardAnimation animation={rotatePosition}>
-              <FrontCard>
-                <FrontImage src={Profile} />
-                <FrontText>
-                  NHN Cloud에서 <br />
-                  2023.01.03 ~ 2023.02.28
-                </FrontText>
-              </FrontCard>
+              <FrontCard>{/* <FrontImage src={Profile} /> */}</FrontCard>
               <BackCard>
                 <BackCardName>NHN 클라우드</BackCardName>
                 <BackCardTitle>기간</BackCardTitle>
@@ -107,7 +101,7 @@ const Works = () => {
           >
             <CardAnimation animation={rotatePosition2}>
               <FrontCard>
-                <FrontImage src={Profile} />
+                {/* <FrontImage src={Profile} /> */}
                 <FrontText>
                   펫페오톡에서 <br />
                   2022.01.03 ~ 2022.06.31

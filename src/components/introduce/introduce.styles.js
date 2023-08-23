@@ -7,7 +7,6 @@ import introduceBackground from '../../assets/images/introduce/introduceBackgrou
 export const MainContainer = styled.div`
   display: flex;
 
-  position: relative;
   width: 100%;
   height: 100vh;
 
@@ -32,9 +31,9 @@ export const Hand = styled.img`
 
   height: ${(props) => props.scrollPosition};
 
-  animation: open 1s linear;
+  animation: handOpen 1s linear;
 
-  @keyframes open {
+  @keyframes handOpen {
     0% {
       right: calc(-100vw);
     }
@@ -93,33 +92,4 @@ export const LeftContainer = styled.div`
   opacity: 0;
 
   transition: 1s;
-`;
-
-export const DescriptionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  padding-top: 50px;
-  padding-right: 20px;
-`;
-
-export const DescriptionWrapper = styled.div`
-  color: black;
-`;
-
-export const DescriptionTitle = styled.div`
-  font-size: 30px;
-  font-family: 'MontserratBold';
-  border-bottom: 2px solid white;
-  padding-bottom: 3px;
-
-  transition: 2s;
-`;
-
-export const DescriptionText = styled.div`
-  padding-top: 5px;
-  font-size: 15px;
-  font-family: 'NanumSquareR';
 `;

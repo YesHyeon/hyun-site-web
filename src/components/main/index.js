@@ -14,7 +14,7 @@ import {
   ProfileImage,
 } from './index.styles';
 import { useState, useEffect, useRef } from 'react';
-import Headers from '../../components/header/header';
+import Headers from '../header/header';
 import emoji from '../../assets/images/icons/emoji.png';
 
 const MainPage = () => {
