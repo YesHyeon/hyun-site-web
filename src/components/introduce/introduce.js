@@ -1,4 +1,9 @@
-import { MainContainer, Hand, ProfileCardWrapper } from './introduce.styles';
+import {
+  MainContainer,
+  Hand,
+  ProfileCardWrapper,
+  Title,
+} from './introduce.styles';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import hand from '../../assets/images/introduce/hand.svg';
 import ProfileCard from '../profileCard/profileCard';
@@ -13,6 +18,9 @@ function Introduce() {
   const handleScroll = useCallback(([entry]) => {
     if (entry.isIntersecting) {
       setScrollPosition(true);
+      const title1 = document.querySelector('.introduce-title');
+      console.log(title1);
+      title1.classList.add('introduce-title-animation');
     } else {
       setScrollPosition(false);
     }
@@ -43,6 +51,10 @@ function Introduce() {
   return (
     <div>
       <MainContainer ref={handRef}>
+        <Title className="introduce-title">
+          {`About
+         Me`}
+        </Title>
         {scrollPosition ? (
           <>
             <Hand src={hand} />

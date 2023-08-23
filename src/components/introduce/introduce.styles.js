@@ -13,19 +13,61 @@ export const MainContainer = styled.div`
   flex-direction: row;
 
   align-items: center;
-  gap: 20px;
 
-  border-bottom: 3px solid black;
-
-  background-color: white;
   overflow-x: hidden;
   overflow-y: hidden;
 
   scale: 1;
 `;
 
+export const Title = styled.div`
+  font-family: 'BlackHanSans';
+  font-size: 240px;
+  transform: rotate(-10deg);
+  line-height: 280px;
+  color: transparent;
+
+  :hover {
+    cursor: pointer;
+    content: 'Click';
+  }
+
+  ::after {
+    position: absolute;
+    left: 1px;
+    top: 10px;
+    content: 'About Me';
+    color: transparent;
+    -webkit-text-stroke: 3px green;
+  }
+
+  ::before {
+    position: absolute;
+    left: 1px;
+    top: -10px;
+    content: 'About Me';
+    color: transparent;
+    -webkit-text-stroke: 3px red;
+  }
+
+  .introduce-title-animation {
+    animation: titleAnimation 1s linear;
+  }
+
+  @keyframes titleAnimation {
+    0% {
+      font-size: 240px;
+    }
+
+    100% {
+      font-size: 50px;
+      transform: rotate(0deg);
+    }
+  }
+`;
+
 export const Hand = styled.img`
-  width: 800px;
+  width: 700px;
   position: absolute;
   right: -10px;
 

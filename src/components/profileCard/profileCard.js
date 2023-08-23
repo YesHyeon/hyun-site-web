@@ -31,7 +31,7 @@ const ProfileCard = (props) => {
       <BodyContainer>
         <ImageContainer>
           <Profile
-            width="300"
+            width="250px"
             className="profile1"
             src={profileImage}
             alt="profile"

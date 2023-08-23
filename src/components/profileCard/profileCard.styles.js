@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 export const MainContainer = styled.div`
   display: flex;
-
   position: absolute;
+
   flex-direction: column;
   width: calc(100vw - 150px);
   height: calc(100vh - 100px);
@@ -45,15 +45,14 @@ export const BodyContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 100px;
-  border-radius: 30px;
   font-family: 'NanumSquareR';
 `;
 
 export const ImageContainer = styled.div`
   display: flex;
-  width: 300px;
+  width: 250px;
   height: 100%;
   flex-direction: column;
   justify-content: center;
@@ -79,8 +78,8 @@ export const Sns = styled.img`
 `;
 
 export const Profile = styled.img`
-  width: 360px;
-  height: 360px;
+  width: 200px;
+  height: 200px;
 `;
 
 export const TitleContainer = styled.div`
@@ -90,7 +89,7 @@ export const TitleContainer = styled.div`
 
 export const Name = styled.div`
   font-family: 'BlackHanSans';
-  font-size: 100px;
+  font-size: 50px;
   margin-right: 10px;
 `;
 
