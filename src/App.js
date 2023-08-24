@@ -1,9 +1,11 @@
+import { useRef } from 'react';
+
 import './App.css';
-import MainPage from './components/main/index';
+import Main from './components/main/index';
 import Introduce from './components/introduce/introduce';
 import Records from './components/records/records';
 import { Switch, Route } from 'react-router-dom';
-import { useRef } from 'react';
+import Headers from './components/header/header';
 
 function App() {
   const homeRef = useRef(HTMLDivElement);
@@ -15,8 +17,9 @@ function App() {
     <div id="Main">
       <Switch>
         <Route exact={true} path={'/'}>
+          <Headers />
           <div ref={homeRef}>
-            <MainPage />
+            <Main />
           </div>
           <Introduce />
           <Records />

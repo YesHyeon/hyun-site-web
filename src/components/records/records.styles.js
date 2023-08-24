@@ -12,47 +12,6 @@ export const MainContainer = styled.div`
   max-width: 144rem;
 `;
 
-export const Title = styled.div`
-  position: sticky;
-  text-align: center;
-  top: 0px;
-  font-size: 100px;
-  font-family: 'MontserratBold';
-  margin: 0 auto;
-
-  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-  -webkit-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  -webkit-animation: aitf 80s linear infinite;
-`;
-
-export const Title2 = styled.div`
-  width: 100%;
-  height: 70rem;
-  position: sticky;
-  top: 10rem;
-`;
-
-export const Title3 = styled.div`
-  letter-spacing: 0;
-  padding: 0.25em 0 0.325em;
-  display: block;
-  margin: 0 auto;
-  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
-
-  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
-
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-`;
-
 export const DescriptionContainer = styled.div`
   display: block;
   flex-direction: row;
@@ -68,23 +27,54 @@ export const DescriptionWrapper = styled.div`
   width: 100%;
   height: 100vh;
   position: sticky;
-  top: 10px;
+  top: 100px;
   text-align: start;
+  transition: 10s;
 
   &:nth-child(1) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 30%;
   }
   &:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 70%;
+    margin-left: 30%;
+    padding-top: 30px;
   }
-  &:nth-child(3) {
+  /* &:nth-child(3) {
     display: flex;
     flex-direction: column;
     align-items: end;
+  } */
+
+  .box {
+    height: 300px;
+  }
+
+  .title {
+    font-size: 30px;
+    height: 30px;
+    font-family: 'MontserratBold';
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+    box-shadow: inset 0 -20px 0 #ffff6f;
+
+    transition: 2s;
+  }
+
+  .company {
+    padding-top: 5px;
+    font-size: 30px;
+    font-family: 'NanumSquareR';
+  }
+
+  .info {
+    white-space: pre-line;
+    height: 270px;
   }
 `;
 
