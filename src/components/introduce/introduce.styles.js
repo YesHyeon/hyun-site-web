@@ -21,11 +21,13 @@ export const MainContainer = styled.div`
 `;
 
 export const Title = styled.div`
+  margin-left: 20px;
   font-family: 'BlackHanSans';
-  font-size: 240px;
-  transform: rotate(-10deg);
+  font-size: 300px;
   line-height: 280px;
-  color: transparent;
+  transform: rotate(-10deg);
+  /* color: transparent; */
+  white-space: pre-line;
 
   :hover {
     cursor: pointer;

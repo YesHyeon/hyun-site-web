@@ -7,7 +7,6 @@ import {
 import { useState, useEffect, useRef, useCallback } from 'react';
 import hand from '../../assets/images/introduce/hand.svg';
 import ProfileCard from '../profileCard/profileCard';
-import RightMenu from '../rightMenu/rightMenu';
 
 function Introduce() {
   const [cardPosition, setCardPosition] = useState(false);
@@ -26,15 +25,15 @@ function Introduce() {
     }
   }, []);
 
-  const leftScroll = useCallback((e) => {
-    e.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-      } else {
-        entry.target.style.opacity = 0;
-      }
-    });
-  }, []);
+  // const leftScroll = useCallback((e) => {
+  //   e.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.style.opacity = 1;
+  //     } else {
+  //       entry.target.style.opacity = 0;
+  //     }
+  //   });
+  // }, []);
 
   useEffect(() => {
     let observer;
@@ -49,27 +48,23 @@ function Introduce() {
   }, [handleScroll]);
 
   return (
-    <div>
-      <MainContainer ref={handRef}>
-        <Title className="introduce-title">
-          {`About
+    <MainContainer ref={handRef}>
+      <Title className="introduce-title">
+        {`About
          Me`}
-        </Title>
-        {scrollPosition ? (
-          <>
-            <Hand src={hand} />
-            <ProfileCardWrapper
-              onClick={() => {
-                setCardPosition(!cardPosition);
-              }}
-            />
-          </>
-        ) : null}
-        {cardPosition ? (
-          <ProfileCard setCardPosition={setCardPosition} />
-        ) : null}
-      </MainContainer>
-    </div>
+      </Title>
+      {scrollPosition ? (
+        <>
+          <Hand src={hand} />
+          <ProfileCardWrapper
+            onClick={() => {
+              setCardPosition(!cardPosition);
+            }}
+          />
+        </>
+      ) : null}
+      {cardPosition ? <ProfileCard setCardPosition={setCardPosition} /> : null}
+    </MainContainer>
   );
 }
 export default Introduce;
