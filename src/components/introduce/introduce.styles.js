@@ -26,7 +26,7 @@ export const Title = styled.div`
   font-size: 300px;
   line-height: 280px;
   transform: rotate(-10deg);
-  /* color: transparent; */
+  color: transparent;
   white-space: pre-line;
 
   :hover {
