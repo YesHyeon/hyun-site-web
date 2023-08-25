@@ -3,7 +3,8 @@ import { useRef } from 'react';
 import './App.css';
 import Main from './components/main/index';
 import Introduce from './components/introduce/introduce';
-import Records from './components/records/records';
+import Works from './components/works/works';
+import Projects from './components/projects/project';
 import { Switch, Route } from 'react-router-dom';
 import Headers from './components/header/header';
 
@@ -22,7 +23,8 @@ function App() {
             <Main />
           </div>
           <Introduce />
-          <Records />
+          <Works />
+          <Projects />
         </Route>
       </Switch>
       <button onClick={onHomeClick}>
