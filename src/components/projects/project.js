@@ -12,6 +12,7 @@ import {
 import ccc from '../../assets/images/projects/ccc.png';
 import modu from '../../assets/images/projects/modu.png';
 import rabbit from '../../assets/images/projects/rabbit.png';
+import hospital from '../../assets/images/projects/hospital.png';
 
 const records = [
   {
@@ -56,6 +57,23 @@ const records = [
     stack: 'React, JavaScript, Vite, Python, Django',
     date: '2023.04.01 - 2023.07.25',
     image: ccc,
+    info: [
+      '유튜브의 자동자막 서비스의 문제점을 해결하기 위한 크롬 익스텐션 서비스 개발',
+      [
+        '서비스의 DAU가 줄어드는 문제를 인식하고, 앱 내에서 별점을 요청하는 프로젝트를 리드 \n -> 사용자 경험을 방해하지 않는 로직을 재설계하여 두 달만에 ⭐ 0.7 이상 상승',
+        '문의하는 과정이 번거롭다는 니즈를 파악하여 앱 내에서 문의가 가능하도록 채널톡 기능 추가 \n -> 문의하는 사용자의 수가 약 30% 증가하여, 오류 및 개선점을 빠르게 파악 ',
+        '사용자의 경험을 높이기 위한 랜딩페이지 반응형 제작 및 스크롤 애니메이션 도입',
+        '강아지의 감정을 AI로 분석하여 결과를 보여주는 댕상분석 이벤트 페이지 개발',
+      ],
+    ],
+  },
+  {
+    id: '4',
+    title: 'HospitalDelicious : Web',
+    kr: '병원맛집 : 질병맞춤 병원추천 웹',
+    stack: 'React, TypeScript, Recoil',
+    date: '2023.06.28 - 2023.06.30',
+    image: hospital,
     info: [
       '유튜브의 자동자막 서비스의 문제점을 해결하기 위한 크롬 익스텐션 서비스 개발',
       [

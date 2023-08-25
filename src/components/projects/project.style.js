@@ -11,10 +11,13 @@ export const MainContainer = styled.div`
 `;
 
 export const Header = styled.div`
-  width: 100vw;
+  width: 105vw;
   margin: 0 auto;
   font-family: BlackHanSans;
   font-size: 2.5rem;
+
+  top: 200px;
+  position: sticky;
 
   display: flex;
   flex: 0 0 auto;
@@ -45,7 +48,6 @@ export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 60vw;
-  align-items: center;
   margin: 0 auto;
   gap: 30px;
   flex-wrap: wrap;
@@ -66,6 +68,16 @@ export const CardWrapper = styled.div`
   animation-duration: 1s, 6s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: 1, infinite;
+
+  transition: 1s;
+
+  :hover {
+    width: 430px;
+    height: 330px;
+    cursor: pointer;
+    background-color: #9da7ff;
+    box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
+  }
 
   img {
     width: 100%;
