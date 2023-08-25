@@ -17,11 +17,11 @@ function Headers() {
           <Link to="IntroduceBody" spy={true} smooth={true} offset={-51}>
             <HeaderList>Introduce</HeaderList>
           </Link>
-          <HeaderList>Award</HeaderList>
-          <HeaderList>Certification</HeaderList>
-          <HeaderList>Activity</HeaderList>
+          <HeaderList>Work</HeaderList>
           <HeaderList>Project</HeaderList>
-          <HeaderList>SNS</HeaderList>
+          <HeaderList>Activity</HeaderList>
+          <HeaderList>Certificate</HeaderList>
+          <HeaderList>Education</HeaderList>
         </RightWrapper>
       </HeaderWrapper>
     </MainContainer>
