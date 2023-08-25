@@ -5,7 +5,6 @@ export const MainContainer = styled.div`
   height: 150rem;
   top: 10rem;
   align-self: center;
-
   box-sizing: border-box;
   max-width: 144rem;
 
@@ -56,7 +55,7 @@ export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  height: 120rem;
   padding-top: 50px;
   padding-right: 20px;
   flex-grow: 1 1;
@@ -68,6 +67,7 @@ export const DescriptionWrapper = styled.div`
   width: 50%;
   position: sticky;
   top: 100px;
+  height: 100vh;
   transition: 1s;
   padding-left: 30px;
 
