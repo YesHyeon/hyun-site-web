@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import {
   MainContainer,
   DescriptionContainer,
@@ -51,26 +51,42 @@ const record = [
 ];
 
 const Records = () => {
+  const worksDom = useRef();
   const dom = useRef();
 
-  const handleScroll = useCallback(([entry]) => {
-    const title2 = document.querySelector('.background-title');
-    if (entry.isIntersecting) {
-      title2.style.color = 'rgba(0,0,0,0.1)';
-      console.log('인식');
-      // entry.target.style.backgroundColor = 'red';
-    } else {
-      title2.style.color = 'rgba(0,0,0)';
-    }
-  }, []);
+  const [isVisiable, setIsVisiable] = useState(true);
+
+  const handleScroll = useCallback(
+    ([entry]) => {
+      const title2 = document.querySelector('.background-title');
+
+      if (
+        entry.isIntersecting &&
+        entry.target.className.includes('works-title') &&
+        isVisiable
+      ) {
+        console.log('여기');
+        title2.style.animation = 'up 1s forwards';
+        setIsVisiable(!isVisiable);
+      } else if (
+        entry.isIntersecting &&
+        entry.target.className.includes('works-content')
+      ) {
+        title2.style.animation = 'down 3s forwards';
+      }
+    },
+    [isVisiable]
+  );
 
   useEffect(() => {
     let observer;
     const { current } = dom;
+    const { current: worksDomCurrent } = worksDom;
 
     if (current) {
-      observer = new IntersectionObserver(handleScroll, { threshold: 0.3 });
+      observer = new IntersectionObserver(handleScroll, { threshold: 0.2 });
       observer.observe(current);
+      observer.observe(worksDomCurrent);
 
       return () => observer && observer.disconnect();
     }
@@ -92,11 +108,11 @@ const Records = () => {
   // }, []);
 
   return (
-    <MainContainer>
+    <MainContainer className="works-title" ref={worksDom}>
       <div className="background-title">works</div>
       {record.map((item) => {
         return (
-          <DescriptionContainer ref={dom}>
+          <DescriptionContainer className="works-content" ref={dom}>
             {item.contents.map((content) => {
               return (
                 <DescriptionWrapper>
@@ -116,19 +132,6 @@ const Records = () => {
                 </DescriptionWrapper>
               );
             })}
-            {/* <DescriptionWrapper>
-              {item.contents.map((content) => {
-                return (
-                  <ul className="main">
-                    {content.info.main}
-
-                    {content.info.sub.map((i) => {
-                      return <li className="sub">{i}</li>;
-                    })}
-                  </ul>
-                );
-              })}
-            </DescriptionWrapper> */}
           </DescriptionContainer>
         );
       })}
