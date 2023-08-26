@@ -57,7 +57,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 300px;
+  height: 310px;
   margin: 0 auto;
   border-radius: 30px;
   background-color: #ededed;
@@ -84,7 +84,25 @@ export const CardWrapper = styled.div`
     height: 200px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+
+  .stack {
+    display: flex;
+    padding-left: 10px;
+    margin-block: 10px;
+    gap: 4px;
+  }
+
+  .stack-item {
+    font-size: 13px;
+    padding-block: 3px;
+    padding-inline: 5px;
+    font-family: 'NanumSquareR';
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
   }
 
   .kr {
@@ -97,6 +115,7 @@ export const CardWrapper = styled.div`
     padding-left: 10px;
     font-family: 'MontserratBold';
     color: #bebcbc;
+    font-size: 12px;
   }
 
   .date {

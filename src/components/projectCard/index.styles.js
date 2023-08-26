@@ -7,11 +7,13 @@ export const MainContainer = styled.div`
   left: 0;
   z-index: 100;
 
+  flex-shrink: 1, 1, 1;
+
   flex-direction: column;
   align-items: center;
 
   width: calc(100vw - 200px);
-  height: calc(100vh - 100px);
+  height: 80vh;
   margin: 0 auto;
   left: 0px;
   right: 0px;
@@ -19,6 +21,8 @@ export const MainContainer = styled.div`
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
+
+  overflow-y: hidden;
 `;
 
 export const Header = styled.div`
@@ -31,17 +35,17 @@ export const Header = styled.div`
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 
-  .button {
+  button {
     width: 10px;
     font-size: 20px;
-    padding-right: 50px;
+    margin-right: 10px;
     cursor: pointer;
   }
 `;
 
 export const BodyContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -66,7 +70,6 @@ export const ImageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 `;
 
 export const SnsWrapper = styled.div`
@@ -116,7 +119,6 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%;
   padding: 30px;
 
   font-family: 'NanumSquareR';
@@ -127,6 +129,13 @@ export const DescriptionWrapper = styled.div`
 
   .description-list {
     white-space: pre-line;
+  }
+
+  .link {
+    text-decoration: underline;
+    :hover {
+      cursor: pointer;
+    }
   }
 `;
 

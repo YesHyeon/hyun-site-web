@@ -43,14 +43,17 @@ const Project = () => {
     [isClicked]
   );
 
+  const renderLoopText = () => {
+    const renderItem = [];
+    for (let i = 0; i < 5; i++) {
+      renderItem.push(<div className="loop-text">PROJECTS</div>);
+    }
+    return renderItem;
+  };
+
   return (
     <MainContainer>
-      <Header>
-        <div className="loop-text">PROJECTS</div>
-        <div className="loop-text">PROJECTS</div>
-        <div className="loop-text">PROJECTS</div>
-        <div className="loop-text">PROJECTS</div>
-      </Header>
+      <Header>{renderLoopText()}</Header>
       <CardContainer>
         {isClicked ? (
           <ProjectCard item={item} setIsClicked={setIsClicked} />
@@ -65,6 +68,11 @@ const Project = () => {
               }}
             >
               <img src={item.image} alt={item.title} />
+              <div className="stack">
+                {item.stacks[0]['Frontend'].map((stack) => {
+                  return <div className="stack-item">{stack}</div>;
+                })}
+              </div>
               <div className="kr">{item.kr}</div>
               <div className="title">{item.title}</div>
               <div className="date">{item.date}</div>

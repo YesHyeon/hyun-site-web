@@ -3,7 +3,14 @@ export const PROJECTS = [
     id: '0',
     title: 'Modu Time : Web',
     kr: '모두의 시간 : 약속시간 정하기',
-    stack: 'React, Typescript, Recoil ',
+    stacks: [
+      {
+        Frontend: ['React', 'TS', 'Recoil'],
+      },
+      {
+        Backend: ['Java', 'Springboot'],
+      },
+    ],
     date: '2023.01.03-2023.05.15',
     image: 'assets/projects/modu.png',
     description: '다수의 시간 조율을 도와주는 웹앱 서비스 개발',
@@ -29,7 +36,14 @@ export const PROJECTS = [
     id: '1',
     title: 'Rabbit : App',
     kr: '래빗 : 시카고 안전한 경로 앱',
-    stack: 'ReactNative, Typescript, Redux',
+    stacks: [
+      {
+        Frontend: ['React Native', 'TS', 'Redux'],
+      },
+      {
+        Backend: ['Java', 'Springboot', 'Python', 'Flask'],
+      },
+    ],
     date: '2022.09.01-2022.12.22',
     description: '미국 시카고의 범죄로부터 안전한 경로를 추천해주는 앱 개발',
     image: 'assets/projects/rabbit.png',
@@ -52,7 +66,14 @@ export const PROJECTS = [
     id: '2',
     title: 'CCC : Chrome extension',
     kr: 'CCC : 보기쉬운 유튜브 자동자막',
-    stack: 'React, JavaScript, Vite, Python, Django',
+    stacks: [
+      {
+        Frontend: ['React', 'JS', 'Vite'],
+      },
+      {
+        Backend: ['Python', 'Flask'],
+      },
+    ],
     date: '2023.04.01 - 2023.07.25',
     description:
       '유튜브의 자동자막 서비스의 문제점을 해결하기 위한 크롬 익스텐션 서비스 개발',
@@ -69,7 +90,7 @@ export const PROJECTS = [
       },
       {
         크롬익스텐션:
-          'https://chrome.google.com/webstore/detail/ccc-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%EC%9E%90%EB%8F%99%EC%9E%90%EB%A7%89-%EC%83%9D%EC%84%B1%EA%B8%B0/keonbpokgpalcoemgeojdelnhomdminb?utm_source=ext_sidebar&hl=ko',
+          'https://chrome.google.com/webstore/detail/ccc-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%EC%9E%90%EB%8F%99%EC%9E%90%EB%A7%89-%EC%83%9D%EC%84%B1%EA%B8%B0/keonbpokgpalcoemgeojdelnhomdminb',
       },
     ],
   },
@@ -77,7 +98,11 @@ export const PROJECTS = [
     id: '3',
     title: 'PortfolioSite : Web',
     kr: '포트폴리오 사이트 : 개발자 노현',
-    stack: 'React, JavaScript',
+    stacks: [
+      {
+        Frontend: ['React', 'JS'],
+      },
+    ],
     date: '2023.07.01 - 2023.08.31',
     description:
       '그동안의 활동들과 프로젝트를 정리한 인터랙티브한 포트폴리오 사이트 개발',
@@ -100,7 +125,11 @@ export const PROJECTS = [
     id: '4',
     title: 'HospitalDelicious : Web',
     kr: '병원맛집 : 질병맞춤 병원추천 웹',
-    stack: 'React, TypeScript, Recoil',
+    stacks: [
+      {
+        Frontend: ['React', 'TS', 'Recoil'],
+      },
+    ],
     date: '2023.06.28 - 2023.06.30',
     description:
       '유튜브의 자동자막 서비스의 문제점을 해결하기 위한 크롬 익스텐션 서비스 개발',
@@ -124,7 +153,11 @@ export const PROJECTS = [
     id: '5',
     title: 'SnoopyToDo : Web',
     kr: '스누피의 명언 : ToDo 사이트',
-    stack: 'JavaScript',
+    stacks: [
+      {
+        Frontend: ['JS'],
+      },
+    ],
     date: '2021.03.01 - 2021.04.01',
     description:
       'ToDo-List 작성 및 새로고침시 스누피의 명언을 확인할 수 있는 사이트',
@@ -148,7 +181,14 @@ export const PROJECTS = [
     id: '6',
     title: 'MANLIVEYOUNG : Web',
     kr: '맨리브영 : 남자 화장품 추천 앱',
-    stack: 'Flutter',
+    stacks: [
+      {
+        Frontend: ['Flutter', 'Dart'],
+      },
+      {
+        Backend: ['Python', 'Flask'],
+      },
+    ],
     date: '2023.04.01 - 2023.06.25',
     description:
       'Flutter를 이용해 개발한 피부타입에 따른 남자화장품 및 루틴 추천  앱',

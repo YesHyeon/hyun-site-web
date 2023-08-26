@@ -52,20 +52,6 @@ const ProjectCard = (props) => {
       <BodyContainer>
         <ImageContainer>
           <ImageGallery items={images} />
-          <SnsWrapper>
-            <Sns
-              src={github}
-              onClick={() => window.open('https://github.com/YesHyeon')}
-            ></Sns>
-            <Sns
-              src={blog}
-              onClick={() => window.open('https://yeshyun.tistory.com')}
-            ></Sns>
-            <Sns
-              src={email}
-              onClick={() => window.open('https://yeshyun.tistory.com')}
-            ></Sns>
-          </SnsWrapper>
         </ImageContainer>
         <TextContainer>
           <DescriptionWrapper>
@@ -82,10 +68,13 @@ const ProjectCard = (props) => {
             {PROJECTS[props.item].link.map((item, index) => {
               return (
                 <>
-                  <div>{Object.keys(item)[0]}</div>
-                  <a href={item[Object.keys(item)[0]]} alt="dd">
+                  <div className="description"> {Object.keys(item)[0]}</div>
+                  <div
+                    className="link"
+                    onClick={() => window.open(item[Object.keys(item)[0]])}
+                  >
                     {item[Object.keys(item)[0]]}
-                  </a>
+                  </div>
                 </>
               );
             })}
