@@ -15,40 +15,31 @@ const Activities = () => {
 
   //   const [isVisiable, setIsVisiable] = useState(true);
 
-  //   const handleScroll = useCallback(
-  //     ([entry]) => {
-  //       const title2 = document.querySelector('.background-title');
+  const handleScroll = useCallback(([entry]) => {
+    console.log(entry.isIntersecting);
+    const title2 = document.querySelector('.activities-title');
 
-  //       if (
-  //         entry.isIntersecting &&
-  //         entry.target.className.includes('background-title') &&
-  //         isVisiable
-  //       ) {
-  //         title2.style.animation = 'up 1s forwards';
-  //         setIsVisiable(!isVisiable);
-  //       } else if (
-  //         entry.isIntersecting &&
-  //         entry.target.className.includes('works-content')
-  //       ) {
-  //         title2.style.animation = 'down 3s forwards';
-  //       }
-  //     },
-  //     [isVisiable]
-  //   );
+    if (entry.isIntersecting) {
+      title2.style.color = 'rgba(0, 0, 0, 0.1)';
+      title2.style.fontSize = '350px';
+    } else {
+      title2.style.color = 'black';
+      title2.style.fontSize = '300px';
+    }
+  }, []);
 
-  //   useEffect(() => {
-  //     let observer;
-  //     const { current } = dom;
-  //     const { current: worksDomCurrent } = worksDom;
+  useEffect(() => {
+    let observer;
+    const { current } = dom;
+    // const { current: worksDomCurrent } = worksDom;
 
-  //     if (current) {
-  //       observer = new IntersectionObserver(handleScroll, { threshold: 0.2 });
-  //       observer.observe(current);
-  //       observer.observe(worksDomCurrent);
+    if (current) {
+      observer = new IntersectionObserver(handleScroll, { threshold: 0.2 });
+      observer.observe(current);
 
-  //       return () => observer && observer.disconnect();
-  //     }
-  //   }, [handleScroll]);
+      return () => observer && observer.disconnect();
+    }
+  }, [handleScroll]);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -67,7 +58,7 @@ const Activities = () => {
 
   return (
     <MainContainer>
-      <div className="background-title" ref={worksDom}>
+      <div className="activities-title" ref={worksDom}>
         activity
       </div>
       {ACTIVITIES.map((item) => {
@@ -75,7 +66,7 @@ const Activities = () => {
           <DescriptionContainer className="works-content" ref={dom}>
             {item.contents.map((content) => {
               return (
-                <DescriptionWrapper>
+                <DescriptionWrapper ref={dom} key={content.title}>
                   <div className="box">
                     <div className="title">{content.id}</div>
                     <div className="company">{content.title}</div>

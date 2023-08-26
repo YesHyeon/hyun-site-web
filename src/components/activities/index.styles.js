@@ -2,21 +2,20 @@ import styled from '@emotion/styled';
 
 export const MainContainer = styled.div`
   width: 100vw;
-  height: 185rem;
+  /* height: 135rem; */
   top: 10rem;
   align-self: center;
   box-sizing: border-box;
 
-  .background-title {
+  .activities-title {
     margin-top: 100px;
     font-size: 300px;
     position: sticky;
-    height: 50rem;
     top: 10px;
     display: flex;
     justify-content: center;
     /* font-family: 'BlackHansans'; */
-    transition: 1s;
+    transition: 3s;
 
     opacity: 1;
 
