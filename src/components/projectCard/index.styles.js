@@ -72,27 +72,6 @@ export const ImageContainer = styled.div`
   align-items: center;
 `;
 
-export const SnsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-`;
-
-export const Sns = styled.img`
-  width: 30px;
-  cursor: pointer;
-
-  :hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-  }
-`;
-
-export const Profile = styled.img`
-  width: 200px;
-  height: 200px;
-`;
-
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -138,5 +117,3 @@ export const DescriptionWrapper = styled.div`
     }
   }
 `;
-
-export const DescriptionText = styled.li``;

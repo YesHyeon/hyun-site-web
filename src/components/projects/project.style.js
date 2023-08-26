@@ -6,39 +6,39 @@ export const MainContainer = styled.div`
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  height: 100%;
+  height: 100rem;
   margin-top: 100px;
-`;
 
-export const Header = styled.div`
-  width: 105vw;
-  margin: 0 auto;
-  font-family: BlackHanSans;
-  font-size: 2.5rem;
+  .background-title {
+    width: 100vw;
+    margin: 0 auto;
+    font-family: BlackHanSans;
+    font-size: 2.5rem;
 
-  top: 200px;
-  position: sticky;
+    top: 200px;
+    position: sticky;
 
-  display: flex;
-  flex: 0 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: 0.3s;
-  font-size: 15rem;
-  font-weight: bold;
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    font-size: 15rem;
+    font-weight: bold;
 
-  .loop-text {
-    padding-right: 10vw;
-    animation: textLoop 20s linear infinite;
+    .loop-text {
+      padding-right: 10vw;
+      animation: textLoop 20s linear infinite;
 
-    @keyframes textLoop {
-      0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-      }
-      100% {
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+      @keyframes textLoop {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
       }
     }
   }
@@ -75,7 +75,7 @@ export const CardWrapper = styled.div`
     width: 430px;
     height: 330px;
     cursor: pointer;
-    background-color: #9da7ff;
+
     box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
   }
 
@@ -126,29 +126,4 @@ export const CardWrapper = styled.div`
     font-family: 'MontserratThin';
     font-weight: bold;
   }
-`;
-
-export const Card = styled.div`
-  width: 500px;
-  height: 400px;
-  background-color: black;
-`;
-
-export const CardDescriptionContainer = styled.div`
-  width: calc(50% - 100px);
-  display: flex;
-  flex-direction: column;
-`;
-
-export const CardText = styled.div`
-  background-color: red;
-  font-family: 'NanumSquareR';
-  font-size: 20px;
-  color: black;
-`;
-
-export const CardLinkContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: red;
 `;

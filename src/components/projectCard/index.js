@@ -1,24 +1,14 @@
-import '../../assets/fonts/index';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import profileImage from '../../assets/images/introduce/profile.png';
 import {
   Header,
   BodyContainer,
   MainContainer,
-  CloseButton,
   TextContainer,
   ImageContainer,
-  Profile,
   TitleContainer,
   DescriptionWrapper,
-  DescriptionText,
-  SnsContainer,
-  Sns,
-  SnsWrapper,
 } from './index.styles';
-import github from '../../assets/images/icons/github.svg';
-import blog from '../../assets/images/icons/blog.svg';
-import email from '../../assets/images/icons/email.svg';
+
 import ImageGallery from 'react-image-gallery';
 
 import { PROJECTS } from '../../constants/project';

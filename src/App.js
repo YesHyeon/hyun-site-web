@@ -7,6 +7,7 @@ import Works from './components/works/works';
 import Projects from './components/projects/project';
 import { Switch, Route } from 'react-router-dom';
 import Headers from './components/header/header';
+import Records from './components/records/records';
 
 function App() {
   const homeRef = useRef(HTMLDivElement);
@@ -25,6 +26,7 @@ function App() {
           <Introduce />
           <Works />
           <Projects />
+          <Records />
         </Route>
       </Switch>
       <button onClick={onHomeClick}>

@@ -1,15 +1,6 @@
 import { useState, useCallback } from 'react';
 
-import {
-  MainContainer,
-  Header,
-  CardContainer,
-  CardWrapper,
-  Card,
-  CardText,
-  CardLinkContainer,
-  CardDescriptionContainer,
-} from './project.style';
+import { MainContainer, CardContainer, CardWrapper } from './project.style';
 
 import ProjectCard from '../projectCard';
 
@@ -20,7 +11,7 @@ const Project = () => {
   const [item, setItem] = useState(0);
 
   const handleCardClick = useCallback(
-    (id, index) => {
+    (id) => {
       setIsClicked(!isClicked);
       setItem(id);
       // console.log(isClicked);
@@ -53,7 +44,7 @@ const Project = () => {
 
   return (
     <MainContainer>
-      <Header>{renderLoopText()}</Header>
+      <div className="background-title">{renderLoopText()}</div>
       <CardContainer>
         {isClicked ? (
           <ProjectCard item={item} setIsClicked={setIsClicked} />
