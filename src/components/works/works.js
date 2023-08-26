@@ -6,6 +6,7 @@ import {
   DescriptionText,
   DescriptionWrapper,
 } from './works.styles';
+import Title from '../title/title';
 
 const records = [
   {
@@ -50,7 +51,7 @@ const records = [
   },
 ];
 
-const Records = () => {
+const Works = () => {
   const worksDom = useRef();
   const dom = useRef();
 
@@ -62,7 +63,7 @@ const Records = () => {
 
       if (
         entry.isIntersecting &&
-        entry.target.className.includes('works-title') &&
+        entry.target.className.includes('background-title') &&
         isVisiable
       ) {
         title2.style.animation = 'up 1s forwards';
@@ -107,8 +108,10 @@ const Records = () => {
   // }, []);
 
   return (
-    <MainContainer className="works-title" ref={worksDom}>
-      <div className="background-title">works</div>
+    <MainContainer className="works-title">
+      <div className="background-title" ref={worksDom}>
+        works
+      </div>
       {records.map((item) => {
         return (
           <DescriptionContainer className="works-content" ref={dom}>
@@ -138,4 +141,4 @@ const Records = () => {
   );
 };
 
-export default Records;
+export default Works;

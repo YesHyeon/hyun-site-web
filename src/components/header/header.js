@@ -8,9 +8,9 @@ import {
   RightWrapper,
 } from './header.styles';
 
-function Headers() {
+const Headers = () => {
   return (
-    <MainContainer>
+    <MainContainer className="header">
       <HeaderWrapper>
         <LeftWrapper>Hyun</LeftWrapper>
         <RightWrapper>
@@ -26,5 +26,5 @@ function Headers() {
       </HeaderWrapper>
     </MainContainer>
   );
-}
+};
 export default Headers;

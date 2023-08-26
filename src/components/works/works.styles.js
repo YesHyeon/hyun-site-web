@@ -14,7 +14,6 @@ export const MainContainer = styled.div`
     position: sticky;
     top: 30px;
     /* font-family: 'BlackHansans'; */
-    transition: 1s;
     display: flex;
     justify-content: center;
     transition: 2s;
