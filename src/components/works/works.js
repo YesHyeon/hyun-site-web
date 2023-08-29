@@ -6,7 +6,6 @@ import {
   DescriptionText,
   DescriptionWrapper,
 } from './works.styles';
-import Title from '../title/title';
 
 const records = [
   {
