@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import roomStartBack from '../../assets/images/banners/background1.png';
+import { media } from '../../styles/theme';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -17,11 +17,18 @@ export const MainContainer = styled.div`
   overflow-y: hidden;
 
   background-color: white;
+
+  ${media.mobile} {
+    flex-direction: column;
+  }
 `;
 
 export const ProfileImage = styled.img`
   width: 350px;
-  height: 300px;
+
+  ${media.mobile} {
+    width: 200px;
+  }
 `;
 
 export const OpacityBackground = styled.div`
@@ -39,7 +46,7 @@ export const Title = styled.div`
 
 export const Description = styled.div`
   font-family: 'BlackHanSans';
-  font-size: 50px;
+  font-size: 3rem;
 
   color: ${(props) =>
     props.index === 0
@@ -49,20 +56,34 @@ export const Description = styled.div`
       : props.index === 3
       ? '#14461C'
       : 'black'};
+
+  ${media.mobile} {
+    font-size: 1.8rem;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  ${media.mobile} {
+    align-items: center;
+    gap: 10px;
+  }
 `;
 
 export const TypingWrapper = styled.div`
   display: flex;
-  height: 70px;
+  height: 4.4rem;
+
+  ${media.mobile} {
+    height: 2.5rem;
+  }
 `;
 
 export const Blink = styled.div`
-  border-right: 3px solid black;
+  border-right: 0.2rem solid black;
+
   animation: blink 1s infinite;
   @keyframes blink {
     50% {
