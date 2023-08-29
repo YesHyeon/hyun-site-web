@@ -1,4 +1,3 @@
-import 'react-image-gallery/styles/css/image-gallery.css';
 import {
   Header,
   BodyContainer,
@@ -7,6 +6,7 @@ import {
   ImageContainer,
   TitleContainer,
   DescriptionWrapper,
+  Gallery,
 } from './index.styles';
 
 import ImageGallery from 'react-image-gallery';
@@ -41,7 +41,7 @@ const ProjectCard = (props) => {
       </TitleContainer>
       <BodyContainer>
         <ImageContainer>
-          <ImageGallery items={images} />
+          <Gallery items={images} />
         </ImageContainer>
         <TextContainer>
           <DescriptionWrapper>

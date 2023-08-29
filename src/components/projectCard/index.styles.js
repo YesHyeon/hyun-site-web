@@ -1,9 +1,20 @@
 import styled from '@emotion/styled';
+import { media } from '../../styles/theme';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
+export const Gallery = styled(ImageGallery)`
+  ${media.mobile} {
+    .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal {
+      display: none;
+    }
+  }
+`;
 
 export const MainContainer = styled.div`
   display: flex;
   position: fixed;
-  top: 30px;
+  top: 100px;
   left: 0;
   z-index: 100;
 
@@ -23,6 +34,11 @@ export const MainContainer = styled.div`
   border-radius: 10px;
 
   overflow-y: hidden;
+
+  ${media.mobile} {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 150px);
+  }
 `;
 
 export const Header = styled.div`
@@ -50,8 +66,12 @@ export const BodyContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-left: 40px;
 
-  padding-left: 30px;
+  ${media.mobile} {
+    flex-direction: column;
+    margin-left: 0px;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -61,6 +81,10 @@ export const TextContainer = styled.div`
   height: 100%;
 
   overflow-y: scroll;
+
+  ${media.mobile} {
+    width: 100%;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -70,6 +94,10 @@ export const ImageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${media.mobile} {
+    width: 80%;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -83,10 +111,18 @@ export const TitleContainer = styled.div`
     font-family: 'BlackHanSans';
     font-size: 30px;
     margin-right: 10px;
+
+    ${media.mobile} {
+      font-size: 25px;
+    }
   }
 
   .title {
     font-family: bold;
+
+    ${media.mobile} {
+      display: none;
+    }
   }
 
   .date {
@@ -115,5 +151,9 @@ export const DescriptionWrapper = styled.div`
     :hover {
       cursor: pointer;
     }
+  }
+
+  ${media.mobile} {
+    margin-bottom: 50px;
   }
 `;

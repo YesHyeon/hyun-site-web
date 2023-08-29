@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { floatAnimation } from '../../utils/floatingAnimation';
+import { media } from '../../styles/theme';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -26,6 +27,11 @@ export const MainContainer = styled.div`
     font-size: 15rem;
     font-weight: bold;
 
+    ${media.mobile} {
+      font-size: 5rem;
+      top: 300px;
+    }
+
     .loop-text {
       padding-right: 10vw;
       animation: textLoop 20s linear infinite;
@@ -51,6 +57,11 @@ export const CardContainer = styled.div`
   margin: 0 auto;
   gap: 30px;
   flex-wrap: wrap;
+
+  ${media.mobile} {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100vw;
+  }
 `;
 
 export const CardWrapper = styled.div`
@@ -77,6 +88,10 @@ export const CardWrapper = styled.div`
     cursor: pointer;
 
     box-shadow: 10px 25px 3px 0px rgba(0, 0, 0, 0.3);
+
+    ${media.mobile} {
+      width: 300px;
+    }
   }
 
   img {
@@ -125,5 +140,9 @@ export const CardWrapper = styled.div`
     align-items: end;
     font-family: 'MontserratThin';
     font-weight: bold;
+  }
+
+  ${media.mobile} {
+    width: 300px;
   }
 `;
