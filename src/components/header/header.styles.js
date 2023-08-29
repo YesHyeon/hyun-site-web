@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { media } from '../../styles/theme';
 
 export const MainContainer = styled.header`
   top: 0px;
@@ -23,16 +24,28 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   padding-top: 10px;
   width: 100%;
+
+  ${media.mobile} {
+    justify-content: center;
+  }
 `;
 
 export const LeftWrapper = styled.div`
   font-family: 'BlackHanSans';
   font-size: 30px;
   padding-left: 100px;
+
+  ${media.mobile} {
+    padding-left: 0px;
+  }
 `;
 
 export const RightWrapper = styled.div`
   display: flex;
   gap: 20px;
   padding-right: 150px;
+
+  ${media.mobile} {
+    display: none;
+  }
 `;
