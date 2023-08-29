@@ -18,22 +18,15 @@ function Introduce() {
     if (entry.isIntersecting) {
       setScrollPosition(true);
       const title1 = document.querySelector('.introduce-title');
-      console.log(title1);
       title1.classList.add('introduce-title-animation');
     } else {
       setScrollPosition(false);
     }
   }, []);
 
-  // const leftScroll = useCallback((e) => {
-  //   e.forEach((entry) => {
-  //     if (entry.isIntersecting) {
-  //       entry.target.style.opacity = 1;
-  //     } else {
-  //       entry.target.style.opacity = 0;
-  //     }
-  //   });
-  // }, []);
+  const handleCardClick = () => {
+    setCardPosition(!cardPosition);
+  };
 
   useEffect(() => {
     let observer;
@@ -56,11 +49,7 @@ function Introduce() {
       {scrollPosition ? (
         <>
           <Hand src={hand} />
-          <ProfileCardWrapper
-            onClick={() => {
-              setCardPosition(!cardPosition);
-            }}
-          />
+          <ProfileCardWrapper onClick={handleCardClick} />
         </>
       ) : null}
       {cardPosition ? <ProfileCard setCardPosition={setCardPosition} /> : null}
