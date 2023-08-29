@@ -20,30 +20,6 @@ export const MainContainer = styled.div`
     opacity: 1;
 
     color: black;
-
-    @keyframes up {
-      0% {
-        transform: translateY(1000px);
-      }
-      100% {
-        transform: translateY(0px);
-        opacity: 1;
-      }
-    }
-
-    @keyframes down {
-      0% {
-        transform: translateY(0px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(300px);
-        font-size: 500px;
-        /* align-items: flex-end; */
-        color: rgba(0, 0, 0, 0.1);
-        opacity: 1;
-      }
-    }
   }
 `;
 

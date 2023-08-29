@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { media } from '../../styles/theme';
+
 export const MainContainer = styled.div`
   width: 100%;
   height: 150rem;
@@ -24,6 +26,11 @@ export const MainContainer = styled.div`
 
     color: black;
 
+    ${media.mobile} {
+      font-size: 100px;
+      top: 200px;
+    }
+
     @keyframes up {
       0% {
         transform: translateY(1000px);
@@ -45,6 +52,10 @@ export const MainContainer = styled.div`
         /* align-items: flex-end; */
         color: rgba(0, 0, 0, 0.1);
         opacity: 1;
+
+        ${media.mobile} {
+          font-size: 100px;
+        }
       }
     }
   }
@@ -77,20 +88,36 @@ export const DescriptionWrapper = styled.div`
     flex-direction: column;
     align-items: end;
     left: 50%;
+
+    ${media.mobile} {
+      left: 0%;
+      background-color: white;
+    }
   } /* &:nth-child(3) {
     display: flex;
     flex-direction: column;
     
   } */
+  ${media.mobile} {
+    width: 100%;
+    top: 55px;
+  }
 
   .box {
     font-family: 'MontserratBold';
   }
 
+  .company-wraaper {
+    ${media.mobile} {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
   .title {
     font-size: 50px;
     font-family: 'MontserratBold';
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     margin-bottom: 10px;
     background-clip: text;
     -webkit-background-clip: text;
@@ -137,6 +164,11 @@ export const DescriptionWrapper = styled.div`
     font-size: 30px;
     font-family: 'MontserratBold';
     font-weight: bold;
+
+    ${media.mobile} {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
   }
 
   .date,

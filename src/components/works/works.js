@@ -119,8 +119,10 @@ const Works = () => {
               return (
                 <DescriptionWrapper>
                   <div className="box">
-                    <div className="title">{content.id}</div>
-                    <div className="company">{content.title}</div>
+                    <div className="company-wraaper">
+                      <div className="title">{content.id}</div>
+                      <div className="company">{content.title}</div>
+                    </div>
                     <div className="date">{content.date}</div>
                     <div className="team">{content.team}</div>
                     <div className="stack">{content.stack}</div>
