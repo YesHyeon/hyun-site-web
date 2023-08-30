@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
+import { Container, media } from '../../styles/theme';
 
-export const MainContainer = styled.div`
-  width: 100vw;
-  /* height: 135rem; */
-  top: 10rem;
+export const MainContainer = styled(Container)`
   align-self: center;
   box-sizing: border-box;
+  height: 200rem;
 
   .activities-title {
     margin-top: 100px;
@@ -14,7 +13,6 @@ export const MainContainer = styled.div`
     top: 10px;
     display: flex;
     justify-content: center;
-    /* font-family: 'BlackHansans'; */
     transition: 3s;
 
     opacity: 1;
@@ -27,10 +25,8 @@ export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* height: 150rem; */
   padding-top: 50px;
   transition: 3s;
-  width: 100vw;
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -105,19 +101,6 @@ export const DescriptionWrapper = styled.div`
         background-position-y: 100%;
       }
     }
-    /* animation: gradient 1s ease infinite; */
-
-    /* @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    } */
   }
 
   .company {

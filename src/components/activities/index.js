@@ -11,7 +11,6 @@ const Activities = () => {
   const dom = useRef();
 
   const handleScroll = useCallback(([entry]) => {
-    console.log(entry.isIntersecting);
     const title2 = document.querySelector('.activities-title');
 
     if (entry.isIntersecting) {
@@ -38,7 +37,7 @@ const Activities = () => {
   return (
     <MainContainer>
       <div className="activities-title" ref={worksDom}>
-        activity
+        activities
       </div>
       {ACTIVITIES.map((item) => {
         return (

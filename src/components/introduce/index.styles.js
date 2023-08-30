@@ -1,18 +1,15 @@
 import styled from '@emotion/styled';
 import card from '../../assets/images/introduce/card.png';
 import { floatAnimation } from '../../utils/floatingAnimation';
-import { media } from '../../styles/theme';
+import { Container, media } from '../../styles/theme';
 import {
   slideRightCardAnimation,
   slideRightCardAnimationForMobile,
 } from '../../utils/slideRightCardAnimation';
 import { slideRightHandAnimation } from '../../utils/slideRightHandAnimation';
 
-export const MainContainer = styled.div`
+export const MainContainer = styled(Container)`
   display: flex;
-
-  width: 100%;
-  height: 100vh;
 
   flex-direction: row;
 

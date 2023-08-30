@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { floatAnimation } from '../../utils/floatingAnimation';
-import { media } from '../../styles/theme';
+import { Container, media } from '../../styles/theme';
 
-export const MainContainer = styled.div`
+export const MainContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -16,7 +16,7 @@ export const MainContainer = styled.div`
     font-family: BlackHanSans;
     font-size: 2.5rem;
 
-    top: 200px;
+    top: 12.5rem;
     position: sticky;
 
     display: flex;

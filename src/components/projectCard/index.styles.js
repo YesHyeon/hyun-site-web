@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { media } from '../../styles/theme';
 import ImageGallery from 'react-image-gallery';
-import 'react-image-gallery/styles/css/image-gallery.css';
+// import 'react-image-gallery/styles/css/image-gallery.css';
 
 export const Gallery = styled(ImageGallery)`
   ${media.mobile} {
@@ -11,9 +11,22 @@ export const Gallery = styled(ImageGallery)`
   }
 `;
 
+export const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+`;
+
 export const MainContainer = styled.div`
   display: flex;
-  position: fixed;
   top: 100px;
   left: 0;
   z-index: 100;
@@ -23,7 +36,7 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: calc(100vw - 200px);
+  width: 80rem;
   height: 80vh;
   margin: 0 auto;
   left: 0px;
@@ -61,7 +74,7 @@ export const Header = styled.div`
 
 export const BodyContainer = styled.div`
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -89,14 +102,16 @@ export const TextContainer = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
-  width: 50%;
-  height: 100%;
+  width: 30rem;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10rem;
 
   ${media.mobile} {
     width: 80%;
+    margin-bottom: 0rem;
   }
 `;
 
@@ -133,6 +148,7 @@ export const TitleContainer = styled.div`
 export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  height: 60rem;
   gap: 20px;
   padding: 30px;
 
@@ -155,5 +171,8 @@ export const DescriptionWrapper = styled.div`
 
   ${media.mobile} {
     margin-bottom: 50px;
+    justify-content: flex-start;
+    height: 100%;
+    height: calc(100% + 20rem);
   }
 `;

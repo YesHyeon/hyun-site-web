@@ -2,13 +2,26 @@ import styled from '@emotion/styled';
 
 import { media } from '../../styles/theme';
 
+export const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+`;
+
 export const MainContainer = styled.div`
   display: flex;
-  position: absolute;
 
   flex-direction: column;
-  width: calc(100vw - 150px);
-  height: calc(100vh - 150px);
+  width: 80rem;
+  height: 80vh;
   margin: 0 auto;
   left: 0px;
   right: 0px;
@@ -17,6 +30,8 @@ export const MainContainer = styled.div`
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
+
+  overflow-y: hidden;
 
   gap: 50px;
 
@@ -30,7 +45,6 @@ export const Header = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  /* position: sticky; */
   top: 0px;
   width: 100%;
   height: 40px;
@@ -47,11 +61,12 @@ export const CloseButton = styled.div`
 `;
 
 export const BodyContainer = styled.div`
-  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
+  padding-bottom: 30px;
+  padding-inline: 30px;
 
   ${media.mobile} {
     flex-direction: column;
@@ -77,7 +92,7 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-left: 100px;
+  padding-left: 30px;
 
   ${media.mobile} {
     flex-direction: column;
@@ -95,7 +110,7 @@ export const SnsContainer = styled.div`
 `;
 
 export const Sns = styled.img`
-  width: 45px;
+  width: 35px;
   cursor: pointer;
 
   :hover {

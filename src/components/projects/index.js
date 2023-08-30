@@ -14,22 +14,6 @@ const Project = () => {
     (id) => {
       setIsClicked(!isClicked);
       setItem(id);
-      // console.log(isClicked);
-      // if (isClicked[index]) {
-      //   console.log('여기1');
-      //   card.style.width = '430px';
-      //   card.style.height = '330px';
-      // } else {
-      //   console.log('여기2');
-      //   card.style.width = '800px';
-      //   card.style.height = '600px';
-      // }
-      // const newData = isClicked;
-      // newData[index] = !isClicked[index];
-      // setIsClicked(newData);
-
-      // console.log(document.querySelector(`.${id}`));
-      // alert('dd');
     },
     [isClicked]
   );

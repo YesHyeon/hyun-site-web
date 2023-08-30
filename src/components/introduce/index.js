@@ -2,12 +2,15 @@ import { MainContainer, Hand, ProfileCardWrapper, Title } from './index.styles';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import hand from '../../assets/images/introduce/hand.svg';
 import ProfileCard from '../profileCard';
+import { useBodyScrollLock } from '../../hooks/useBodyScrollLock';
 
 function Introduce() {
   const [cardPosition, setCardPosition] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
 
   const handRef = useRef();
+
+  const { lockScroll } = useBodyScrollLock();
 
   const handleScroll = useCallback(([entry]) => {
     if (entry.isIntersecting) {
@@ -20,6 +23,7 @@ function Introduce() {
   }, []);
 
   const handleCardClick = () => {
+    lockScroll();
     setCardPosition(!cardPosition);
   };
 

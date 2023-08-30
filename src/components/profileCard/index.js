@@ -16,10 +16,12 @@ import {
   DescriptionText,
   SnsContainer,
   Sns,
+  Wrapper,
 } from './index.styles';
 import github from '../../assets/images/icons/github.svg';
 import blog from '../../assets/images/icons/blog.svg';
 import email from '../../assets/images/icons/email.svg';
+import { useEffect } from 'react';
 
 const ABOUTME = {
   name: '노현',
@@ -35,49 +37,58 @@ const ABOUTME = {
 };
 
 const ProfileCard = (props) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const handleCloseClick = () => {
+    document.body.style.overflow = 'unset';
+    props.setCardPosition(false);
+  };
+
   return (
-    <MainContainer>
-      <Header>
-        <CloseButton onClick={() => props.setCardPosition(false)}>
-          X
-        </CloseButton>
-      </Header>
-      <BodyContainer>
-        <ImageContainer>
-          <Profile
-            width="250px"
-            className="profile1"
-            src={profileImage}
-            alt="profile"
-          />
-          <SnsContainer>
-            <Sns
-              src={github}
-              onClick={() => window.open('https://github.com/YesHyeon')}
-            ></Sns>
-            <Sns
-              src={blog}
-              onClick={() => window.open('https://yeshyun.tistory.com')}
-            ></Sns>
-            <Sns
-              src={email}
-              onClick={() => window.open('https://yeshyun.tistory.com')}
-            ></Sns>
-          </SnsContainer>
-        </ImageContainer>
-        <TextContainer>
-          <TitleContainer>
-            <Name>{ABOUTME.name}</Name>
-            <Job>{ABOUTME.position}</Job>
-          </TitleContainer>
-          <Description>
-            {ABOUTME.description.map((item) => {
-              return <DescriptionText>{item}</DescriptionText>;
-            })}
-          </Description>
-        </TextContainer>
-      </BodyContainer>
-    </MainContainer>
+    <Wrapper>
+      <MainContainer>
+        <Header>
+          <CloseButton onClick={handleCloseClick}>X</CloseButton>
+        </Header>
+        <BodyContainer>
+          <ImageContainer>
+            <Profile
+              width="250px"
+              className="profile1"
+              src={profileImage}
+              alt="profile"
+            />
+            <SnsContainer>
+              <Sns
+                src={github}
+                onClick={() => window.open('https://github.com/YesHyeon')}
+              ></Sns>
+              <Sns
+                src={blog}
+                onClick={() => window.open('https://yeshyun.tistory.com')}
+              ></Sns>
+              <Sns
+                src={email}
+                onClick={() => window.open('https://yeshyun.tistory.com')}
+              ></Sns>
+            </SnsContainer>
+          </ImageContainer>
+          <TextContainer>
+            <TitleContainer>
+              <Name>{ABOUTME.name}</Name>
+              <Job>{ABOUTME.position}</Job>
+            </TitleContainer>
+            <Description>
+              {ABOUTME.description.map((item) => {
+                return <DescriptionText>{item}</DescriptionText>;
+              })}
+            </Description>
+          </TextContainer>
+        </BodyContainer>
+      </MainContainer>
+    </Wrapper>
   );
 };
 

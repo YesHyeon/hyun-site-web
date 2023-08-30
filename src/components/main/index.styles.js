@@ -36,7 +36,6 @@ export const OpacityBackground = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background-color: red;
 `;
 
 export const Title = styled.div`
@@ -101,7 +100,6 @@ export const Svg = styled.svg`
 export const RainWrapper = styled.div`
   width: 100%;
   height: 500px;
-  background-color: red;
 `;
 
 export const Flag = styled.div`

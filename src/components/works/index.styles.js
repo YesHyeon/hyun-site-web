@@ -1,14 +1,12 @@
 import styled from '@emotion/styled';
 
-import { media } from '../../styles/theme';
+import { Container, media } from '../../styles/theme';
 
-export const MainContainer = styled.div`
-  width: 100%;
-  height: 150rem;
+export const MainContainer = styled(Container)`
+  height: 210rem;
   top: 10rem;
   align-self: center;
   box-sizing: border-box;
-  max-width: 144rem;
 
   .background-title {
     height: 100vh;
@@ -76,8 +74,8 @@ export const DescriptionWrapper = styled.div`
   color: black;
   width: 50%;
   position: sticky;
-  top: 100px;
-  height: 100vh;
+  top: 10rem;
+  height: 70rem;
   transition: 1s;
   padding-left: 30px;
 
