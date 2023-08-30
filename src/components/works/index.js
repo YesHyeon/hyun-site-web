@@ -89,21 +89,6 @@ const Works = () => {
     }
   }, [handleScroll]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     //   const title1 = document.querySelector('.title-opacity');
-  //     // console.log(window.scrollY);
-  //     //   if (window.scrollY > 3500) {
-  //     //     title1.classList.add('project-title-animation');
-  //     //   } else {
-  //     //     title1.classList.remove('project-title-animation');
-  //     //   }
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
   return (
     <MainContainer className="works-title">
       <div className="background-title" ref={worksDom}>
@@ -114,7 +99,7 @@ const Works = () => {
           <DescriptionContainer className="works-content" ref={dom}>
             {item.contents.map((content) => {
               return (
-                <DescriptionWrapper>
+                <DescriptionWrapper key={content.id}>
                   <div className="box">
                     <div className="company-wraaper">
                       <div className="title">{content.id}</div>
