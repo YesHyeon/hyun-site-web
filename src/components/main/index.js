@@ -16,11 +16,7 @@ import {
 import { useState, useEffect, useRef } from 'react';
 import emoji from '../../assets/images/icons/emoji.png';
 
-import useViewport from '../../hooks/useViewport';
-
 const MainPage = () => {
-  const { isMobile } = useViewport();
-
   const NAME_TEXT = 'Hyun Roh';
 
   const DES_TEXT = [
