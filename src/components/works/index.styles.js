@@ -195,19 +195,3 @@ export const DescriptionWrapper = styled.div`
     padding-bottom: 10px;
   }
 `;
-
-export const DescriptionTitle = styled.text`
-  font-size: 30px;
-  font-family: 'MontserratBold';
-  border-bottom: 2px solid white;
-  padding-bottom: 3px;
-  box-shadow: inset 0 -20px 0 #ffff6f;
-
-  transition: 2s;
-`;
-
-export const DescriptionText = styled.div`
-  padding-top: 5px;
-  font-size: 15px;
-  font-family: 'NanumSquareR';
-`;

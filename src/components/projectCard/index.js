@@ -9,8 +9,6 @@ import {
   Gallery,
 } from './index.styles';
 
-import ImageGallery from 'react-image-gallery';
-
 import { PROJECTS } from '../../constants/project';
 
 const ProjectCard = (props) => {

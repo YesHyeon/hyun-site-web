@@ -2,10 +2,8 @@ import React, { useEffect, useRef, useCallback, useState } from 'react';
 import {
   MainContainer,
   DescriptionContainer,
-  DescriptionTitle,
-  DescriptionText,
   DescriptionWrapper,
-} from './works.styles';
+} from './index.styles';
 
 const records = [
   {

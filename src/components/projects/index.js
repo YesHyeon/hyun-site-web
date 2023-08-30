@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-import { MainContainer, CardContainer, CardWrapper } from './project.style';
+import { MainContainer, CardContainer, CardWrapper } from './index.style';
 
 import ProjectCard from '../projectCard';
 

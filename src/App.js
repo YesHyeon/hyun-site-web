@@ -2,10 +2,10 @@ import { useRef } from 'react';
 
 import './App.css';
 import Main from './components/main/index';
-import Introduce from './components/introduce/introduce';
-import Works from './components/works/works';
-import Projects from './components/projects/project';
-import Headers from './components/header/header';
+import Introduce from './components/introduce';
+import Works from './components/works';
+import Projects from './components/projects';
+import Headers from './components/header';
 import Activities from './components/activities/';
 import Etc from './components/etc';
 import Footer from './footer';

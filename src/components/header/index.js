@@ -1,12 +1,11 @@
 import { Link } from 'react-scroll';
-import profileImage from '../../assets/images/introduce/hyun-profile.png';
 import {
   MainContainer,
   HeaderWrapper,
   HeaderList,
   LeftWrapper,
   RightWrapper,
-} from './header.styles';
+} from './index.styles';
 
 const Headers = () => {
   return (

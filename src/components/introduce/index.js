@@ -1,12 +1,7 @@
-import {
-  MainContainer,
-  Hand,
-  ProfileCardWrapper,
-  Title,
-} from './introduce.styles';
+import { MainContainer, Hand, ProfileCardWrapper, Title } from './index.styles';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import hand from '../../assets/images/introduce/hand.svg';
-import ProfileCard from '../profileCard/profileCard';
+import ProfileCard from '../profileCard';
 
 function Introduce() {
   const [cardPosition, setCardPosition] = useState(false);

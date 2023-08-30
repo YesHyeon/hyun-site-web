@@ -16,7 +16,7 @@ import {
   DescriptionText,
   SnsContainer,
   Sns,
-} from './profileCard.styles';
+} from './index.styles';
 import github from '../../assets/images/icons/github.svg';
 import blog from '../../assets/images/icons/blog.svg';
 import email from '../../assets/images/icons/email.svg';

@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useCallback, useState } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import {
   MainContainer,
   DescriptionContainer,
-  DescriptionTitle,
-  DescriptionText,
   DescriptionWrapper,
 } from './index.styles';
 import { ACTIVITIES } from '../../constants/activity';
