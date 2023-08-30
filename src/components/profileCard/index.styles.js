@@ -67,6 +67,7 @@ export const BodyContainer = styled.div`
   align-items: center;
   padding-bottom: 30px;
   padding-inline: 30px;
+  overflow-y: scroll;
 
   ${media.mobile} {
     flex-direction: column;

@@ -8,6 +8,10 @@ export const MainContainer = styled(Container)`
   align-self: center;
   box-sizing: border-box;
 
+  ${media.mobile} {
+    height: 130rem;
+  }
+
   .background-title {
     height: 100vh;
     font-size: 300px;
@@ -47,6 +51,7 @@ export const MainContainer = styled(Container)`
       100% {
         transform: translateY(300px);
         font-size: 500px;
+
         /* align-items: flex-end; */
         color: rgba(0, 0, 0, 0.1);
         opacity: 1;
@@ -79,10 +84,15 @@ export const DescriptionWrapper = styled.div`
   transition: 1s;
   padding-left: 30px;
 
-  &:nth-child(1) {
+  ${media.mobile} {
+    width: 100%;
+    top: 5rem;
+  }
+
+  &:nth-of-type(1) {
     align-items: start;
   }
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     flex-direction: column;
     align-items: end;
     left: 50%;
@@ -91,14 +101,6 @@ export const DescriptionWrapper = styled.div`
       left: 0%;
       background-color: white;
     }
-  } /* &:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    
-  } */
-  ${media.mobile} {
-    width: 100%;
-    top: 55px;
   }
 
   .box {
@@ -142,19 +144,6 @@ export const DescriptionWrapper = styled.div`
         background-position-y: 100%;
       }
     }
-    /* animation: gradient 1s ease infinite; */
-
-    /* @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    } */
   }
 
   .company {
@@ -184,6 +173,9 @@ export const DescriptionWrapper = styled.div`
     font-family: 'NanumSquareR';
     margin-bottom: 20px;
     box-shadow: inset 0 -10rem 0 #dbdbdbeb;
+    ${media.mobile} {
+      font-size: 14px;
+    }
   }
 
   .sub {
@@ -191,5 +183,8 @@ export const DescriptionWrapper = styled.div`
     font-family: 'NanumSquareR';
     white-space: pre-line;
     padding-bottom: 10px;
+    ${media.mobile} {
+      font-size: 13px;
+    }
   }
 `;

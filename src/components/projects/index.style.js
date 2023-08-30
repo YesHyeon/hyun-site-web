@@ -14,7 +14,6 @@ export const MainContainer = styled(Container)`
     width: 100vw;
     margin: 0 auto;
     font-family: BlackHanSans;
-    font-size: 2.5rem;
 
     top: 12.5rem;
     position: sticky;

@@ -48,18 +48,18 @@ export const DescriptionWrapper = styled.div`
     padding: 10px;
   }
 
-  &:nth-child(1) {
+  &:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
     left: calc(100vw / 3);
   }
-  &:nth-child(3) {
+  &:nth-of-type(3) {
     display: flex;
     flex-direction: column;
     align-items: end;

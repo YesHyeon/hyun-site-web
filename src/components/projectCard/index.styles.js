@@ -110,7 +110,7 @@ export const ImageContainer = styled.div`
   margin-bottom: 10rem;
 
   ${media.mobile} {
-    width: 80%;
+    width: 50%;
     margin-bottom: 0rem;
   }
 `;
