@@ -18,4 +18,8 @@ body,
   right: 50px;
   width: 4rem;
   height: 4rem;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
 }
