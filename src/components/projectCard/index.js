@@ -9,7 +9,6 @@ import {
   Gallery,
   Wrapper,
 } from './index.styles';
-
 import { PROJECTS } from '../../constants/project';
 
 const ProjectCard = (props) => {

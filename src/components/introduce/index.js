@@ -1,14 +1,13 @@
-import { MainContainer, Hand, ProfileCardWrapper, Title } from './index.styles';
 import { useState, useEffect, useRef, useCallback } from 'react';
+
+import { MainContainer, Hand, ProfileCardWrapper, Title } from './index.styles';
 import hand from '../../assets/images/introduce/hand.svg';
 import ProfileCard from '../profileCard';
 import { useBodyScrollLock } from '../../hooks/useBodyScrollLock';
 
-function Introduce() {
+function Introduce({ introduceRef }) {
   const [cardPosition, setCardPosition] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(false);
-
-  const handRef = useRef();
 
   const { lockScroll } = useBodyScrollLock();
 
@@ -29,7 +28,7 @@ function Introduce() {
 
   useEffect(() => {
     let observer;
-    const { current } = handRef;
+    const { current } = introduceRef;
 
     if (current) {
       observer = new IntersectionObserver(handleScroll, { threshold: 0.3 });
@@ -40,7 +39,7 @@ function Introduce() {
   }, [handleScroll]);
 
   return (
-    <MainContainer ref={handRef}>
+    <MainContainer ref={introduceRef}>
       <Title className="introduce-title">
         {`About
          Me`}

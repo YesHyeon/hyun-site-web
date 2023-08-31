@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { MainContainer, RainItem } from './rain.styles';
 
 const Rain = () => {

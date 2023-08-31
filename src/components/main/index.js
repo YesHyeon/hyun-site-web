@@ -16,15 +16,15 @@ import {
 import { useState, useEffect, useRef } from 'react';
 import emoji from '../../assets/images/icons/emoji.png';
 
-const MainPage = () => {
-  const NAME_TEXT = 'Hyun Roh';
+const DES_TEXT = [
+  '기록과 디자인을 즐기는  ',
+  'React를 사용하는   ',
+  'Typescript를 사용하는   ',
+  '새로움에 도전적인     ',
+];
 
-  const DES_TEXT = [
-    '기록과 디자인을 즐기는  ',
-    'React를 사용하는   ',
-    'Typescript를 사용하는   ',
-    '새로움에 도전적인     ',
-  ];
+const MainPage = ({ mainRef }) => {
+  const NAME_TEXT = 'Hyun Roh';
 
   const [text, setText] = useState('');
   const [descriptionText, setDescritionText] = useState('');
@@ -72,15 +72,6 @@ const MainPage = () => {
     return () => clearInterval(nameInterval);
   });
 
-  const svg = {
-    start: { pathLength: 0, fill: 'none' },
-    end: {
-      pathLength: 1,
-      fill: 'black',
-      transition: { duration: 100 },
-    },
-  };
-
   const flaTextArray = ['Frontend Developer'];
 
   for (let i = 0; i < 4; i++) {
@@ -88,7 +79,7 @@ const MainPage = () => {
   }
 
   return (
-    <MainContainer>
+    <MainContainer ref={mainRef}>
       <ProfileImage src={emoji} />
       <DescriptionWrapper>
         <Description ref={boxRef}>안녕하세요 👨🏻‍💻 </Description>

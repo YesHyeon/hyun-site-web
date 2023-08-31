@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useCallback } from 'react';
+
 import {
   MainContainer,
   DescriptionContainer,
@@ -6,7 +7,7 @@ import {
 } from './index.styles';
 import { ACTIVITIES } from '../../constants/activity';
 
-const Activities = () => {
+const Activities = ({ activitiesRef }) => {
   const worksDom = useRef();
   const dom = useRef();
 
@@ -35,7 +36,7 @@ const Activities = () => {
   }, [handleScroll]);
 
   return (
-    <MainContainer>
+    <MainContainer ref={activitiesRef}>
       <div className="activities-title" ref={worksDom}>
         activities
       </div>

@@ -1,11 +1,8 @@
 import { useEffect, useCallback, useRef } from 'react';
+
 import { MainContainer } from './index.styles';
 
-const Etc = () => {
-  const dom = useRef();
-
-  //   const [isVisiable, setIsVisiable] = useState(true);
-
+const Etc = ({ etcRef }) => {
   const handleScroll = useCallback(([entry]) => {
     const etc = document.querySelector('.Main');
     const header = document.querySelector('.header');
@@ -26,7 +23,7 @@ const Etc = () => {
 
   useEffect(() => {
     let observer;
-    const { current } = dom;
+    const { current } = etcRef;
 
     if (current) {
       observer = new IntersectionObserver(handleScroll, { threshold: 0.1 });
@@ -37,7 +34,7 @@ const Etc = () => {
   }, [handleScroll]);
 
   return (
-    <MainContainer className="etc" ref={dom}>
+    <MainContainer className="etc" ref={etcRef}>
       <div className="title">Certificate</div>
       <div className="list">
         <div className="item">ADSP</div>

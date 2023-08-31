@@ -15,6 +15,12 @@ export const MainContainer = styled(Container)`
 export const HeaderList = styled.div`
   font-weight: bold;
   font-family: 'MontserratThin';
+  transition: 1s;
+  :hover {
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    scale: 1.2;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
@@ -34,6 +40,9 @@ export const LeftWrapper = styled.div`
   font-family: 'BlackHanSans';
   font-size: 30px;
   padding-left: 100px;
+  :hover {
+    cursor: pointer;
+  }
 
   ${media.mobile} {
     padding-left: 0px;

@@ -5,11 +5,11 @@ import { media } from '../styles/theme';
 export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
   white-space: pre-line;
   text-align: center;
-  background-image: url(${backgroun1});
+  margin-block: 2rem;
+  padding-top: 5rem;
+  border-top: 1px solid white;
   background-size: 100vw;
   ${media.mobile} {
     background-size: 100vw 100vh;

@@ -1,12 +1,10 @@
 import { useState, useCallback } from 'react';
 
 import { MainContainer, CardContainer, CardWrapper } from './index.style';
-
 import ProjectCard from '../projectCard';
-
 import { PROJECTS } from '../../constants/project';
 
-const Project = () => {
+const Projects = ({ projectsRef }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [item, setItem] = useState(0);
 
@@ -27,7 +25,7 @@ const Project = () => {
   };
 
   return (
-    <MainContainer>
+    <MainContainer ref={projectsRef}>
       <div className="background-title">{renderLoopText()}</div>
       <CardContainer>
         {isClicked ? (
@@ -59,4 +57,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;

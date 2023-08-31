@@ -9,50 +9,30 @@ import Headers from './components/header';
 import Activities from './components/activities/';
 import Etc from './components/etc';
 import Footer from './footer';
+import MoveTopBtn from './components/moveTopButton';
 
 function App() {
-  const homeRef = useRef(HTMLDivElement);
+  const mainRef = useRef(HTMLDivElement);
   const introduceRef = useRef(HTMLDivElement);
   const worksRef = useRef(HTMLDivElement);
   const projectsRef = useRef(HTMLDivElement);
   const activitiesRef = useRef(HTMLDivElement);
   const etcRef = useRef(HTMLDivElement);
 
-  const handleArrowClick = () => {
-    homeRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div id="Main" className="Main">
       <Headers
+        mainRef={mainRef}
         refs={[introduceRef, worksRef, projectsRef, activitiesRef, etcRef]}
       />
-      <div ref={homeRef}>
-        <Main />
-      </div>
-      <div ref={introduceRef}>
-        <Introduce />
-      </div>
-      <div ref={worksRef}>
-        <Works />
-      </div>
-      <div ref={projectsRef}>
-        <Projects />
-      </div>
-      <div ref={activitiesRef}>
-        <Activities />
-      </div>
-      <div ref={etcRef}>
-        <Etc ref={etcRef} />
-      </div>
+      <Main mainRef={mainRef} />
+      <Introduce introduceRef={introduceRef} />
+      <Works worksRef={worksRef} />
+      <Projects projectsRef={projectsRef} />
+      <Activities activitiesRef={activitiesRef} />
+      <Etc etcRef={etcRef} />
       <Footer />
-      <button onClick={handleArrowClick}>
-        <img
-          src={require('./assets/images/icons/arrow.png')}
-          className="moveTopBtn"
-          alt="mobeTopBtn"
-        />
-      </button>
+      <MoveTopBtn mainRef={mainRef} />
     </div>
   );
 }

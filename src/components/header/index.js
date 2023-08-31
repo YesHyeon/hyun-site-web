@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import {
   MainContainer,
   HeaderWrapper,
@@ -13,10 +12,17 @@ const Headers = (props) => {
   const handleListClick = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
   return (
     <MainContainer className="header">
       <HeaderWrapper>
-        <LeftWrapper>Hyun</LeftWrapper>
+        <LeftWrapper
+          onClick={() => {
+            handleListClick(props.mainRef);
+          }}
+        >
+          Hyun
+        </LeftWrapper>
         <RightWrapper>
           {LIST.map((item, index) => {
             return (
