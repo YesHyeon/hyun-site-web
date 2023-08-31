@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 import { MainContainer, Hand, ProfileCardWrapper, Title } from './index.styles';
-import hand from '../../assets/images/introduce/hand.svg';
+import hand from '../../assets/images/introduce/hand.webp';
 import ProfileCard from '../profileCard';
 import { useBodyScrollLock } from '../../hooks/useBodyScrollLock';
 

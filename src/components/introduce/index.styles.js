@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import card from '../../assets/images/introduce/card.png';
+import card from '../../assets/images/introduce/card.webp';
 import { floatAnimation } from '../../utils/floatingAnimation';
 import { Container, media } from '../../styles/theme';
 import {
@@ -60,7 +60,7 @@ export const Hand = styled.img`
 
   height: ${(props) => props.scrollPosition};
 
-  animation: ${slideRightHandAnimation} 1s linear;
+  animation: ${slideRightHandAnimation} 0.7s linear;
 
   ${media.mobile} {
     width: 20rem;
@@ -84,7 +84,7 @@ export const ProfileCardWrapper = styled.div`
   animation-fill-mode: forwards;
   animation-name: ${slideRightCardAnimation}, ${floatAnimation};
   animation-delay: 0s, 1s;
-  animation-duration: 1s, 6s;
+  animation-duration: 0.7s, 6s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: 1, infinite;
 
