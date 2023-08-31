@@ -49,8 +49,8 @@ export const MainContainer = styled.div`
   overflow-y: hidden;
 
   ${media.mobile} {
-    width: calc(100vw - 20px);
-    height: calc(100vh - 150px);
+    width: calc(100vw - 1.5rem);
+    height: calc(100vh - 13rem);
   }
 `;
 
