@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
-import { media } from '../../styles/theme';
+import { Container, media } from '../../styles/theme';
 
-export const MainContainer = styled.header`
+export const MainContainer = styled(Container)`
   top: 0px;
   display: flex;
   position: fixed;
+  left: 0;
+  right: 0;
   justify-content: center;
-  width: 100%;
   height: 10vh;
-  background-color: red;
   z-index: 100;
 `;
 

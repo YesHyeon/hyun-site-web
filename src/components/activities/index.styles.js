@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/react';
 
 export const MainContainer = styled(Container)`
   align-self: center;
-  height: 200rem;
+  height: 400vh;
   font-size: 19rem;
 
   ${media.mobile} {
@@ -16,7 +16,7 @@ export const MainContainer = styled(Container)`
     font-size: 19rem;
 
     position: sticky;
-    top: 10px;
+    top: 2rem;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -69,7 +69,7 @@ export const DescriptionWrapper = styled.div`
   position: sticky;
 
   top: 350px;
-  height: 50rem;
+  height: 100vh;
   transition: 1s;
   padding-inline: 30px;
 

@@ -1,11 +1,8 @@
 import styled from '@emotion/styled';
-import { media } from '../../styles/theme';
+import { Container, media } from '../../styles/theme';
 
-export const MainContainer = styled.div`
+export const MainContainer = styled(Container)`
   display: flex;
-
-  width: 100%;
-  height: 100vh;
 
   flex-direction: row;
   justify-content: center;
