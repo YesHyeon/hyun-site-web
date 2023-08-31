@@ -14,11 +14,11 @@ const Activities = () => {
     const title2 = document.querySelector('.activities-title');
 
     if (entry.isIntersecting) {
-      title2.style.color = 'rgba(0, 0, 0, 0.1)';
-      title2.style.fontSize = '350px';
+      title2.style.animation = null;
+      title2.style.animation = 'activitiesDown 2s forwards';
     } else {
-      title2.style.color = 'black';
-      title2.style.fontSize = '300px';
+      title2.style.animation = null;
+      title2.style.animation = 'activitiesUp 2s forwards';
     }
   }, []);
 

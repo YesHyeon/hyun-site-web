@@ -37,6 +37,7 @@ export const MainContainer = styled.div`
 
   ${media.mobile} {
     width: calc(100vw - 10px);
+    height: 65vh;
     gap: 0px;
   }
 `;
@@ -96,11 +97,11 @@ export const ImageContainer = styled.div`
   padding-left: 30px;
 
   ${media.mobile} {
-    flex-direction: column;
+    flex-direction: row;
     gap: 5px;
-    margin-top: 300px;
+    margin-top: 400px;
     margin-bottom: 10px;
-    margin-left: 0px;
+    margin-left: -30px;
   }
 `;
 
@@ -108,6 +109,10 @@ export const SnsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  ${media.mobile} {
+    flex-direction: column;
+  }
 `;
 
 export const Sns = styled.img`
@@ -121,6 +126,7 @@ export const Sns = styled.img`
 
   ${media.mobile} {
     width: 30px;
+    margin-left: 20px;
   }
 `;
 
@@ -129,8 +135,8 @@ export const Profile = styled.img`
   border-radius: 30px;
 
   ${media.mobile} {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 30px;
   }
 `;

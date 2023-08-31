@@ -8,7 +8,7 @@ export const MainContainer = styled.header`
   justify-content: center;
   width: 100%;
   height: 10vh;
-  background-color: white;
+  background-color: red;
   z-index: 100;
 `;
 

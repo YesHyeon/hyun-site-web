@@ -1,16 +1,23 @@
 import styled from '@emotion/styled';
 import { Container, media } from '../../styles/theme';
+import { keyframes } from '@emotion/react';
 
 export const MainContainer = styled(Container)`
   align-self: center;
-  box-sizing: border-box;
   height: 200rem;
+  font-size: 19rem;
+
+  ${media.mobile} {
+    font-size: 6rem;
+  }
 
   .activities-title {
-    margin-top: 100px;
-    font-size: 300px;
+    margin-top: 20rem;
+    font-size: 19rem;
+
     position: sticky;
     top: 10px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     transition: 3s;
@@ -18,6 +25,31 @@ export const MainContainer = styled(Container)`
     opacity: 1;
 
     color: black;
+
+    ${media.mobile} {
+      font-size: 150px;
+      top: 3rem;
+    }
+
+    @keyframes activitiesDown {
+      0% {
+        font-size: 0.8em;
+      }
+      100% {
+        color: rgba(0, 0, 0, 0.1);
+        font-size: 1em;
+      }
+    }
+
+    @keyframes activitiesUp {
+      0% {
+        color: rgba(0, 0, 0, 0.1);
+        font-size: 1em;
+      }
+      100% {
+        font-size: 0.8em;
+      }
+    }
   }
 `;
 
@@ -27,6 +59,7 @@ export const DescriptionContainer = styled.div`
   gap: 20px;
   padding-top: 50px;
   transition: 3s;
+  font-size: 16px;
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -40,12 +73,24 @@ export const DescriptionWrapper = styled.div`
   transition: 1s;
   padding-inline: 30px;
 
+  ${media.mobile} {
+    width: 100vw;
+    background-color: white;
+    top: 4rem;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
   img {
     display: flex;
     width: calc(100vw / 4);
     height: 300px;
     border-radius: 30px;
     padding: 10px;
+
+    ${media.mobile} {
+      display: none;
+    }
   }
 
   &:nth-of-type(1) {

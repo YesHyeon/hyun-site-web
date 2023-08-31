@@ -1,4 +1,4 @@
-import styled, { DefaultTheme, css } from 'styled-components';
+import styled from '@emotion/styled';
 
 const customMediaQuery = (maxWidth) => `@media (max-width: ${maxWidth}px)`;
 

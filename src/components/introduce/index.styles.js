@@ -18,63 +18,38 @@ export const MainContainer = styled(Container)`
   overflow-x: hidden;
   overflow-y: hidden;
 
+  font-size: 280px;
+
+  ${media.mobile} {
+    font-size: 100px;
+  }
   scale: 1;
 `;
 
 export const Title = styled.div`
   margin-left: 20px;
-  font-family: 'BlackHanSans';
-  font-size: 300px;
+  font-size: 280px;
+  margin-top: 60px;
   line-height: 280px;
-  transform: rotate(-10deg);
-  color: transparent;
+
+  transform: rotate(-8deg);
   white-space: pre-line;
 
-  :hover {
-    cursor: pointer;
-    content: 'Click';
-  }
-
-  ::after {
-    position: absolute;
-    left: 1px;
-    top: 10px;
-    content: 'About Me';
-    color: transparent;
-    -webkit-text-stroke: 3px green;
-  }
-
-  ::before {
-    position: absolute;
-    left: 1px;
-    top: -10px;
-    content: 'About Me';
-    color: transparent;
-    -webkit-text-stroke: 3px red;
-  }
-
-  .introduce-title-animation {
-    animation: titleAnimation 1s linear;
-  }
+  animation: titleAnimation 1s forwards;
 
   @keyframes titleAnimation {
     0% {
-      font-size: 240px;
+      font-size: 1em;
     }
 
     100% {
-      font-size: 50px;
+      font-size: 1.2em;
       transform: rotate(0deg);
     }
   }
 
   ${media.mobile} {
-    font-size: 5rem;
-    line-height: 9rem;
-
-    ::before {
-      -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5);
-    }
+    line-height: 24rem;
   }
 `;
 

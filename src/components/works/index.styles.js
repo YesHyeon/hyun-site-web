@@ -35,7 +35,7 @@ export const MainContainer = styled(Container)`
 
     @keyframes up {
       0% {
-        transform: translateY(1000px);
+        transform: translateY(300px);
       }
       100% {
         transform: translateY(0px);

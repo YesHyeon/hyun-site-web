@@ -1,17 +1,20 @@
 import styled from '@emotion/styled';
+import { Container, media } from '../../styles/theme';
 
-export const MainContainer = styled.header`
+export const MainContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  width: 100%;
+  margin-top: 10rem;
   height: 100vh;
-  z-index: 100;
 
   .title {
-    font-size: 200px;
+    font-size: 10rem;
+    margin-top: 5rem;
+    ${media.mobile} {
+      font-size: 4rem;
+    }
   }
 
   .list {
@@ -19,27 +22,4 @@ export const MainContainer = styled.header`
     flex-direction: row;
     gap: 20px;
   }
-`;
-
-export const HeaderList = styled.div``;
-
-export const HeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  width: 100%;
-`;
-
-export const LeftWrapper = styled.div`
-  font-family: 'BlackHanSans';
-  font-size: 30px;
-  padding-left: 100px;
-`;
-
-export const RightWrapper = styled.div`
-  display: flex;
-  gap: 20px;
-  padding-right: 150px;
 `;

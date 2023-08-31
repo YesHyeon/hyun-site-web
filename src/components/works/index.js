@@ -52,28 +52,23 @@ const Works = () => {
   const worksDom = useRef();
   const dom = useRef();
 
-  const [isVisiable, setIsVisiable] = useState(true);
+  const handleScroll = useCallback(([entry]) => {
+    const title2 = document.querySelector('.background-title');
 
-  const handleScroll = useCallback(
-    ([entry]) => {
-      const title2 = document.querySelector('.background-title');
-
-      if (
-        entry.isIntersecting &&
-        entry.target.className.includes('background-title') &&
-        isVisiable
-      ) {
-        title2.style.animation = 'up 1s forwards';
-        setIsVisiable(!isVisiable);
-      } else if (
-        entry.isIntersecting &&
-        entry.target.className.includes('works-content')
-      ) {
-        title2.style.animation = 'down 3s forwards';
-      }
-    },
-    [isVisiable]
-  );
+    if (
+      entry.isIntersecting &&
+      entry.target.className.includes('background-title')
+    ) {
+      title2.style.animation = null;
+      title2.style.animation = 'up 1s forwards';
+    } else if (
+      entry.isIntersecting &&
+      entry.target.className.includes('works-content')
+    ) {
+      title2.style.animation = null;
+      title2.style.animation = 'down 3s forwards';
+    }
+  }, []);
 
   useEffect(() => {
     let observer;

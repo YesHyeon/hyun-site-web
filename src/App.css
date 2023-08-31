@@ -6,8 +6,6 @@ body,
 }
 
 #Main {
-  display: block;
-  position: relative;
   overflow-x: hidden;
 }
 

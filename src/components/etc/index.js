@@ -1,11 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import {
-  MainContainer,
-  HeaderWrapper,
-  HeaderList,
-  LeftWrapper,
-  RightWrapper,
-} from './index.styles';
+import { MainContainer } from './index.styles';
 
 const Etc = () => {
   const dom = useRef();
@@ -13,7 +7,6 @@ const Etc = () => {
   //   const [isVisiable, setIsVisiable] = useState(true);
 
   const handleScroll = useCallback(([entry]) => {
-    console.log(entry.isIntersecting);
     const etc = document.querySelector('.Main');
     const header = document.querySelector('.header');
 
@@ -34,7 +27,6 @@ const Etc = () => {
   useEffect(() => {
     let observer;
     const { current } = dom;
-    // const { current: worksDomCurrent } = worksDom;
 
     if (current) {
       observer = new IntersectionObserver(handleScroll, { threshold: 0.1 });

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function useViewport() {
   const [width, setWidth] = useState(0);
@@ -12,7 +12,7 @@ function useViewport() {
     setIsMobile(window.innerWidth <= 768 || window.outerWidth <= 768);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     handleResize();
     setIsLoaded(true);
     window.addEventListener('resize', handleResize);

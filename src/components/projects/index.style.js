@@ -7,7 +7,7 @@ export const MainContainer = styled(Container)`
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  height: 100rem;
+  height: 200rem;
   margin-top: 100px;
 
   .background-title {
@@ -67,7 +67,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 310px;
+  height: 20rem;
   margin: 0 auto;
   border-radius: 30px;
   background-color: #ededed;
