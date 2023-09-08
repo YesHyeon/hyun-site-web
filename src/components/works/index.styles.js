@@ -9,7 +9,7 @@ export const MainContainer = styled(Container)`
   box-sizing: border-box;
 
   ${media.mobile} {
-    height: 130rem;
+    height: 180rem;
   }
 
   .background-title {
@@ -68,7 +68,7 @@ export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 120rem;
+  height: 170rem;
   padding-top: 50px;
   padding-right: 20px;
   flex-grow: 1 1;
@@ -86,7 +86,7 @@ export const DescriptionWrapper = styled.div`
 
   ${media.mobile} {
     width: 100%;
-    top: 5rem;
+    top: 4rem;
   }
 
   &:nth-of-type(1) {
